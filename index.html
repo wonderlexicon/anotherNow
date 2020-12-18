@@ -5,39 +5,56 @@
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
-    <script>AFRAME.registerComponent('scale-on-mouseenter', {
-        // ...
-      });
-    </script>
-
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.6/dist/aframe-extras.min.js"></script>
+    <script script.js></script>
+    
   </head>
   <body>
-    <!-- <a-mixin id="pink" scale="5 5 5"></a-mixin>
-    <img src="tired.png"> -->
+   
     <!-- 10 secs to load else you aint gonna be included . -->
     <!-- <a-assets timeout="10000"></a-assets> -->
     <!-- <a-asset-item id="church-img" src="assets/img/church-jpg"></a-asset-item>
     <a-asset-item id="squish-img" src="assets/img/squish-jpg"></a-asset-item> -->
     <a-scene>
       <a-assets>
+           <a-mixin id="pink" scale="5 5 5"></a-mixin>
+            <img src="tired.jpg">
             <audio src="watersounds.wav"></audio>
             <audio src="layeredchant.wav"></audio> 
             <audio src="daydream.mp3" autoplay></audio>
-            <audio id="chantmixAud" src="src="assets/audio/chantmix2.wav autoplay = true loop = true preload = true></audio>
-            <audio id="layeredchantAud" src="src="assets/audio/layeredchant.wav autoplay = false loop = true preload = true></audio>
+     
+            <audio id="chantmix" src="assets/audio/chantmix2.wav autoplay = true loop = true preload = true"></audio>
+            <audio id="layeredchant" src="assets/audio/layeredchant.wav autoplay = false loop = true preload = true"></audio>
             <video src="sigh.mp4"></video>
-            <video src="turkeyday.mp4"></video>
-            <video src="weirdness.mp4" preload="auto"></video>
+            <video src="bday.mp4"></video>
+            <video src="crazy.mp4" preload="auto"></video>
             <video id="overitVid" src="overit.mp4"></video>
-            <video id="the-feels" src="thefeels.mp4"></video>
+            <video id="thefeelsVid" src="thefeels.mp4"></video>
+            <video id="teethaVid" src="teetha.mp4"></video>
+            <video id="sighVid" src="sigh.mp4"></video>
+            <video id="turkeydayVid" src="turkeyday.mp4"></video>
+            <video id="weirdnessVid" src="weirdness.mp4"></video>
+            <video id="coffeeVid" src="coffee.mp4"></video>
+
             <img id ="umbrellaTexture" src="assets/img/umbrella.jpg"></img>
             <img id ="scratchTexture" src="assets/img/scratch.jpg"></img>
+            <img id ="eyerollTexture" src="assets/img/eyeroll.jpg"></img>
             <img id ="windowTexture" src="assets/img/window.jpg"></img>
             <img id ="omgTexture" src="assets/img/omg.jpg"></img>
-          </a-assets>
+            <img id ="scaryTexture" src="assets/img/scary.jpg"></img>
 
+            <a-asset-item id="zoom-texture" src="assets/img/bugeye.jpg"></a-asset-item>
+            <a-asset-item id="sigh-vid" src="assets/video/sigh.mp4"></a-asset-item>
 
+          <a-sound src="watersounds.wav" autoplay="true"
+          position="-3 1 -4"></a-sound>
 
+          <a-sound src="layeredchant.wav" autoplay="true"
+          position="-3 1 -4"></a-sound>
+        </a-assets>
+
+        
+     
         <a-box color="red" position="0 -1 -4" rotation="0 45 45" scale="2 2 2"></a-box>
         <a-box color="orange" position="0 -.5 -3" rotation="0 45 45" scale="1 1 1"></a-box>
         <a-box color="blue" position="0 0 -1" rotation="0 45 45" scale=".2 .2 .2"></a-box>
@@ -47,6 +64,35 @@
       <a-box src="#scratchTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"
       animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
       scale-on-mouseenter></a-box>
+
+      <a-box src="#omgTexture" position="2 2 -4" rotation="0 -90 45" scale="1 1 1"
+      animation="property: object3D.position.y; to: 1.1; dir: alternate; dur: 20000; loop: true"
+      scale-on-mouseenter></a-box>
+
+      <a-box
+      src="#scaryTexture"
+      position="-3 2 -5"
+      rotation="0 90 45"
+      scale="1.5 1.5 1.5"
+      animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+      animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
+      animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave"></a-box>
+
+            
+      <a-box 
+      position="0 2 -5" 
+      multisrc="src0:#overitVid; src1:#teethaVid; src2:#thefeelsVid; src3:#coffeeVid; src4:#bdayVid; src5:#weirdnessVid;"
+      opacity=".9"
+      scale="2 2 2"
+      animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+      animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
+      animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave">
+    </a-box> 
+
+      <a-entity
+      text="value: ZOOM!; color: #BBB"
+      position="-0.9 0.2 -3"
+      scale="3.5 3.5 3.5"></a-entity>
 
       <a-camera></a-camera>
       <a-cursor></a-cursor>

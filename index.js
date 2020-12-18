@@ -47,6 +47,11 @@ window.addEventListener("wheel", event=>{
 })
 
 
+  var boxEl = document.querySelector('a-box');
+  boxEl.addEventListener('mouseenter', function () {
+    boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
+
+
 AFRAME.registerComponent('scale-on-mouseenter', {
   schema: {
     to: {default: '2.5 2.5 2.5', type: 'vec3'}
