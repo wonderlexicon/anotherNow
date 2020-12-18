@@ -11,28 +11,28 @@
   </head>
   <body>
    
-    <!-- 10 secs to load else you aint gonna be included . -->
-
-    <!-- <a-asset-item id="church-img" src="assets/img/church-jpg"></a-asset-item>
-    <a-asset-item id="squish-img" src="assets/img/squish-jpg"></a-asset-item> -->
+    <!-- 20 secs to load else you aint gonna be included . -->
     <a-scene>
-     <a-assets timeout="10000"></a-assets> 
+     <a-assets timeout="20000"></a-assets> 
             <audio id="waterAud" src="assets/audio/watersounds.wav"></audio>
             <audio id="layerAud" src="assets/audio/layeredchant.wav"></audio> 
             <audio id="daydreamAud" src="assets/audio/daydream.mp3" autoplay></audio>
             <audio id="chantmix" src="assets/audio/chantmix2.wav" autoplay"></audio>
-            <audio id="layeredchant" src="assets/audio/layeredchant.wav" autoplay = false loop = true preload = true></audio>
-            <video src="assets/video/bday.mp4"></video>
-            <video src="assets/video/crazy.mp4"></video>
-            <video src="assets/video/coachvid.mp4" preload="auto"></video>
-            <video id="overitVid" src="assets/video/overit.mp4"></video>
-            <video id="thefeelsVid" src="assets/video/thefeels.mp4"></video>
-            <video id="teethaVid" src="assets/video/teetha.mp4"></video>
-            <video id="sighVid" src="assets/video/sigh.mp4"></video>
-            <video id="turkeydayVid" src="assets/video/turkeyday.mp4"></video>
-            <video id="weirdnessVid" src="assets/video/weirdness.mp4"></video>
-            <video id="coffeeVid" src="assets/video/coffee.mp4"></video>
-            <img id ="umbrellaTexture" src="assets/img/umbrella.jpg"></img>
+            <audio id="layeredchant" src="assets/audio/layeredchant.wav" autoplay = true loop = true preload = true></audio>
+            <video id= bdayVid src="assets/video/bday.mp4" autoplay = true loop = true preload = true></video>
+            <video id=crazyVid src="assets/video/crazy.mp4 "autoplay = true loop = true preload = true></video>
+            <video id= coachVid src="assets/video/coachvid.mp4" autoplay = true loop = true preload = true"></video>
+            <video id="overitVid" src="assets/video/overit.mp4" autoplay = true loop = true preload = true></video>
+            <video id="thefeelsVid" src="assets/video/thefeels.mp4" autoplay = true loop = true preload = true></video>
+            <video id="teethaVid" src="assets/video/teetha.mp4" autoplay = true loop = true preload = true></video>
+            <video id="turkeydayVid" src="assets/video/turkeyday.mp4" autoplay = true loop = true preload = true></video>
+            <video id="weirdnessVid" src="assets/video/weirdness.mp4" autoplay = true loop = true preload = true></video>
+            <video id="coffeeVid" src="assets/video/coffee.mp4" autoplay = true loop = true preload = true></video>
+            <video id="sighVid" src="assets/video/sigh.mp4" autoplay = true loop = true preload = true></video>
+            <img id ="noiseTexture" src="assets/img/noise.jpg"></img>
+            <img id ="pfloor" src="assets/img/pfloor.jpg"></img>
+            <img id ="eyerollTexture" src="assets/img/eyeroll.jpg"></img>
+            <img id ="redlips" src="assets/img/redlips.jpg"></img>
             <img id ="scratchTexture" src="assets/img/scratch.jpg"></img>
             <img id ="eyerollTexture" src="assets/img/eyeroll.jpg"></img>
             <img id ="windowTexture" src="assets/img/window.jpg"></img>
@@ -41,33 +41,54 @@
             <img id ="tiredTexture" src="assets/img/tired.jpg"></img>
             <img id ="risefallTexture" src="assets/img/risefall.jpg"></img>
             <img id ="piggyTexture" src="assets/img/piggy.jpg"></img>
-           <a-asset-item id="zoom-texture" src="assets/img/bugeye.jpg"></a-asset-item>
-          <a-asset-item id="sigh-vid" src="assets/video/sigh.mp4"></a-asset-item>
-          <a-sound src="assets/audio/watersounds.wav" autoplay="true"
-          position="-3 1 -4"></a-sound>
-          <a-sound src="assets/audio/layeredchant.wav" autoplay="true"
-          position="-3 1 -4"></a-sound>
+            <img id ="frownTexture" src="assets/img/frown.jpg"></img>
+            <img id ="dubiousTexture" src="assets/img/risefall.jpg"></img>
+            <img id ="piggyTexture" src="assets/img/dubious.jpg"></img>
+            <img id ="bossyTexture" src="assets/img/bossy.jpg"></img>
+            <a-asset-item id="zoom-texture" src="assets/img/bugeye.jpg"></a-asset-item>
+            <a-asset-item id="sigh-vid" src="assets/video/sigh.mp4"></a-asset-item>
+            <a-sound src="assets/audio/watersounds.wav" autoplay="true" position="-3 1 -4"></a-sound>
+            <a-sound src="assets/audio/layeredchant.wav" autoplay="true"position="-3 1 -4"></a-sound>
         </a-assets>
 
-        
-     
-        <a-box color="red" position="0 -1 -4" rotation="0 45 45" scale="2 2 2"></a-box>
-        <a-box color="orange" position="0 -.5 -3" rotation="0 45 45" scale="1 1 1"></a-box>
-        <a-box color="blue" position="0 0 -1" rotation="0 45 45" scale=".2 .2 .2"></a-box>
         <a-entity environment="preset: egypt; dressingAmount: 5"></a-entity>
-      <a-sky color="#BF8706"></a-sky>
+     
+ 
+<!-- 
+        <a-box 
+        position="0 1 -7" 
+        multisrc="src0:#crazyVid; src1:#teethaVid; src2:#thefeelsVid; src3:#coffeeVid; src4:#bdayVid; src5:#weirdnessVid;"
+        opacity=".9"
+        scale="4 4 4"
+        animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+        animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
+        animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave">
+      </a-box>  -->
 
-      <a-box src="#scratchTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"
-      animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+
+      <a-box 
+      position="-15 1 -7" 
+      multisrc="src0:#coffeeVid; src1:#teethaVid; src2:#thefeelsVid; src3:#piggyTexture; src4:#micTexture; src5:#windowTexture;"
+      opacity=".9"
+      scale="4 4 4">
+    </a-box>  
+
+
+    <a-box src="#bdayVid" position=".5 -2 -5" rotation="0 45 45" scale="2 2 2"
+    animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+    scale-on-mouseenter></a-box>
+
+      <a-box src="#scratchTexture" position="-10 2 -15" rotation="0 45 45" scale="2 2 2"
+      animation="property: object3D.position.y; to: 0.2; dir: alternate; dur: 2000; loop: true"
       scale-on-mouseenter></a-box>
 
-      <a-box src="#omgTexture" position="2 2 -4" rotation="0 -90 45" scale="1 1 1"
+      <a-box src="#omgTexture" position="2 10 -4" rotation="0 -90 45" scale="1 1 1"
       animation="property: object3D.position.y; to: 1.1; dir: alternate; dur: 20000; loop: true"
       scale-on-mouseenter></a-box>
 
       <a-box
       src="#squishTexture"
-      position="0 -1 -10"
+      position="-5 -1 -10"
       rotation="0 90 45"
       scale="3 3 3"
       animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
@@ -84,30 +105,30 @@
       animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave"></a-box>
 
       <a-box 
-      position="0 1 -7" 
+      position="30 -3 -3" 
       multisrc="src0:#overitVid; src1:#bdayVid; src2:#thefeelsVid; src3:#coffeeVid; src4:#overitVid; src5:#turkeydayVid;"
       opacity=".9"
       scale="4 4 4"
       animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
       </a-box>
             
-      <a-box 
-      position="0 1 -7" 
-      multisrc="src0:#crazyVid; src1:#teethaVid; src2:#thefeelsVid; src3:#coffeeVid; src4:#bdayVid; src5:#weirdnessVid;"
-      opacity=".9"
-      scale="4 4 4"
-      animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
-      animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
-      animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave">
-    </a-box> 
+      <a-box color="red" position="30 -1 -4" rotation="0 45 45" scale="2 2 2"></a-box>
+      <a-box color="orange" position="-20 -.5 -3" rotation="0 45 45" scale="1 1 1"></a-box>
+      <a-box color="blue" position="-15 10 -1" rotation="0 45 45" scale=".2 .2 .2"></a-box>
+
 
       <a-entity
-      text="value: intheZoomsphere; color: #black"
+      text="value: intheZoomsphere; color: #2A2220"
       position="-0.9 0.2 -3"
-      scale="3.5 3.5 3.5"></a-entity>
+      scale="7.5 7.5 7.5"
+      animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+      animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
+      animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave"></a-entity>
 
       <a-camera></a-camera>
       <a-cursor></a-cursor>
+      <a-sky color="#BF8706"></a-sky>
+
     </a-scene> 
     </a-scene>
   </body>

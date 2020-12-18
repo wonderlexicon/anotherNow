@@ -1,28 +1,27 @@
 {
-    "name": "example",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/wonderlexicon/Example.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/wonderlexicon/Example/issues"
-    },
-    "homepage": "https://github.com/wonderlexicon/Example#readme",
-    "dependencies": {
-      "aframe-layout-component": "^5.3.0",
-      "express": "^4.17.1",
-      "http": "0.0.1-security",
-      "nodeman": "^1.1.2",
-      "nodemon": "^2.0.6"
-    },
-    "devDependencies": {}
-  }
-  
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wonderlexicon/Example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wonderlexicon/Example/issues"
+  },
+  "homepage": "https://github.com/wonderlexicon/Example#readme",
+  "dependencies": {
+    "aframe-layout-component": "^5.3.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "nodeman": "^1.1.2",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {}
+}

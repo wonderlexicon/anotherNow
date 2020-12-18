@@ -1,6 +1,6 @@
-
 console.log(document.querySelector('a-assets').fileLoader);
 console.log(THREE.Cache);
+
 
 let express = require('express');
 let app = express();
@@ -11,7 +11,7 @@ app.get('/', (req,res)=> {
     res.sendFile(path.join(__dirname + '/index.html'));
 })
 
-app.use("/", express.static("."));
+// app.use("/", express.static("."));
 
 let http = require('http');
 let server = http.createServer(app);
@@ -21,8 +21,21 @@ server.listen(port,() =>{
 });
 
 
-// app.use("/", express.static("."));
+ app.use("/", express.static("."));
 
+
+ AFRAME.registerComponent('query-selector-example', {
+  init: function () {
+    this.entities = document.querySelectorAll('.box');
+  },
+  
+  tick: function () {
+    // Don't call query selector in here, query beforehand.
+    for (let i = 0; i < this.entities.length; i++) {
+      // Do something with entities.
+    }
+  }
+});
 
 
 window.addEventListener("wheel", event=>{
@@ -51,10 +64,10 @@ window.addEventListener("wheel", event=>{
   boxEl.addEventListener('mouseenter', function () {
     boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
 
-
+  
 AFRAME.registerComponent('scale-on-mouseenter', {
   schema: {
-    to: {default: '2.5 2.5 2.5', type: 'vec3'}
+    to: {type:'vec3'}
   },
 
   init: function () {
@@ -65,5 +78,8 @@ AFRAME.registerComponent('scale-on-mouseenter', {
     });
   }
 });
+  }
 
-
+  global.window = require('jsdom').jsdom().defaultView;
+  var aframe = require('aframe/src');
+  console.log(aframe.version);
