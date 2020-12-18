@@ -72,7 +72,18 @@ module.exports.createPool = function createPool (objectFactory) {
 
 function clearObject (obj) {
   var key;
-  if (!(obj.constructor === Object)) { return; }
+  if (!obj || obj.constructor !== Object) { return; }
   for (key in obj) { obj[key] = undefined; }
 }
 module.exports.clearObject = clearObject;
+
+function removeUnusedKeys (obj, schema) {
+  var key;
+  if (!obj || obj.constructor !== Object) { return; }
+  for (key in obj) {
+    if (!(key in schema)) {
+      delete obj[key];
+    }
+  }
+}
+module.exports.removeUnusedKeys = removeUnusedKeys;

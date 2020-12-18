@@ -9,7 +9,9 @@ examples: []
 ---
 
 A-Frame has an asset management system that allows us to place our assets in
-one place and to preload and cache assets for better performance.
+one place and to preload and cache assets for better performance. Note the asset
+management system is purely for **preloading assets**. Assets that are set on
+entities at runtime could be done via direct URLs to the assets.
 
 Games and rich 3D experiences traditionally preload their assets, such as
 models or textures, before rendering their scenes. This makes sure that assets
@@ -68,12 +70,10 @@ headers][cors] if the asset is on a different domain. Otherwise, we'd have
 to host assets on the same origin as the scene.
 
 [ghpages]: https://pages.github.com/
-[uploader]: https://cdn.aframe.io
 
-For some options, [GitHub Pages][ghpages] serves everything with CORS headers.
-We recommend GitHub Pages as a simple deployment platform.  Or you could also
-upload assets using the [A-Frame + Uploadcare Uploader][uploader], a service
-that serves files with CORS headers set.
+For other options, [GitHub Pages][ghpages] serves everything with CORS headers.
+We recommend GitHub Pages as a simple deployment platform. Or another service
+that serves files with CORS headers set (such as Amazon S3).
 
 [corsimage]: https://developer.mozilla.org/docs/Web/HTML/CORS_enabled_image
 
@@ -137,7 +137,7 @@ the `loaded` event when they say they have finished loading.
 ### `<a-asset-item>`
 
 `<a-asset-item>` invokes the [three.js
-FileLoader](https://threejs.org/docs/#Reference/Loaders/FileLoader).  We can use
+FileLoader](https://threejs.org/docs/#api/en/loaders/FileLoader).  We can use
 `<a-asset-item>` for any file type. When finished, it will set its `data`
 member with the text response.
 
