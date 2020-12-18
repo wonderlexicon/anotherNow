@@ -60,26 +60,26 @@ window.addEventListener("wheel", event=>{
 })
 
 
-  var boxEl = document.querySelector('a-box');
-  boxEl.addEventListener('mouseenter', function () {
-    boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
+  // var boxEl = document.querySelector('a-box');
+  // boxEl.addEventListener('mouseenter', function () {
+  //   boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
 
   
-AFRAME.registerComponent('scale-on-mouseenter', {
-  schema: {
-    to: {type:'vec3'}
-  },
+// AFRAME.registerComponent('scale-on-mouseenter', {
+//   schema: {
+//     to: {type:'vec3'}
+//   },
 
-  init: function () {
-    var data = this.data;
-    var el = this.el;
-    this.el.addEventListener('mouseenter', function () {
-      el.object3D.scale.copy(data.to);
-    });
-  }
-});
-  }
+//   init: function () {
+//     var data = this.data;
+//     var el = this.el;
+//     this.el.addEventListener('mouseenter', function () {
+//       el.object3D.scale.copy(data.to);
+//     });
+//   }
+// });
+//   }
 
-  global.window = require('jsdom').jsdom().defaultView;
-  var aframe = require('aframe/src');
-  console.log(aframe.version);
+//   global.window = require('jsdom').jsdom().defaultView;
+//   var aframe = require('aframe/src');
+//   console.log(aframe.version);
