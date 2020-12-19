@@ -3,23 +3,26 @@
     <meta name="description" content="20-sided layout of images facing camera"></meta>
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
     <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.min.js"></script>
+    <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@4.3.1/dist/aframe-layout-component.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.6/dist/aframe-extras.min.js"></script>
-    <script src="https://unpkg.com/aframe-layout-component@4.3.1/dist/aframe-layout-component.min.js"></script>
     <script script.js></script>
     
   </head>
   <body>
-   
+    <a-scene background = "color: navy" >
+     <a-light type = "ambient" color = "#445451"></a-light> 
+
     <!-- 20 secs to load else you aint gonna be included . -->
-    <a-scene>
      <a-assets timeout="20000"></a-assets> 
      <a-mixin id="image" geometry="primitive: plane; height: 5; width: 5"
      material="shader: flat; side: double" look-at="[camera]"></a-mixin>
+     <a-mixin id="video" geometry="primitive: plane; height: 5; width: 5"
+     material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             <!-- <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline> <source type="application/x-mpegurl"> <source type="video/mp4" src="assets/video/bday.mp4"></video> -->
-              <img id="everglades" src="../img/everglades.jpg">
             <img id="lassen" src="../img/lassen.jpg">
             <img id="pinnacles" src="../img/pinnacles.jpg">
             <img id="redwoods" src="../img/redwoods.jpg">
@@ -78,11 +81,12 @@
             <a-sound src="assets/audio/layeredchant.wav" autoplay="true"position="-3 1 -4"></a-sound>
         </a-assets>
 
-        <a-entity geometry="primitive: sphere; radius: 1000"
-        material="color: #2994B2; shader: flat" scale="1 1 -1">
-</a-entity>
+
+
+<a-mixin id="image" geometry="primitive: plane; height: 5; width: 5"
+material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-entity environment= "presets:egypt"></a-entity>     
-         <a-sky color="#BF8706"></a-sky>
+         
 
         <!-- <a-entity><gridColor="1b1811"  groundcolor="#8A8F83" skyType="gradient" skyColor="#8a5668" shadow="true" shadowSize="3" fog="2" lightposition="0.4"></a-entity>> -->
         <!-- <script src="arrow-key-rotation.js"></script>
@@ -149,6 +153,42 @@
 
        <!--LANDMARK PURPLE -->
        <a-box color="purple" position="0 5 10" rotation="0 45 45" scale="1 1 1"></a-box>
+       <a-entity id="sphere" geometry="primitive: sphere"
+       material="color: #EFEFEF; shader: flat"
+       position = "0 50 -8" scale="3 3 3"
+       light="type: point; intensity: 2">
+       </a-entity> 
+       <a-entity id="sphere" geometry="primitive: sphere"
+       material="color: #EFEFEF; shader: flat"
+       position = "0 -50 -8" scale="3 3 3"
+       light="type: point; intensity: 2">
+       </a-entity> 
+       <a-entity id="sphere" geometry="primitive: sphere"
+       material="color: #EFEFEF; shader: flat"
+       position = "50 0 -8" scale="3 3 3"
+       light="type: point; intensity: 2">
+       </a-entity> 
+       <a-entity id="sphere" geometry="primitive: sphere"
+       material="color: #EFEFEF; shader: flat"
+       position = "-50 0 -8" scale="3 3 3"
+       light="type: point; intensity: 2">
+       </a-entity>
+       <a-entity id="sphere" geometry="primitive: sphere"
+       material="color: #EFEFEF; shader: flat"
+       position = "50 5 -20"
+       light="type: point; intensity: 2">
+       </a-entity> 
+       <a-entity id="sphere" geometry="primitive: sphere"
+       material="color: #EFEFEF; shader: flat"
+       position = "15 5 10"
+       light="type: point; intensity: 2">
+       </a-entity>
+       <a-entity id="sphere" geometry="primitive: sphere"
+       material="color: #EFEFEF; shader: flat"
+       position = "-15 5 10"
+       light="type: point; intensity: 2">
+      </a-entity>
+
 
         <!-- <a-box src="#bdayVid" position="28 18 -3" rotation="0 -45 45" scale="6 6 6"
         animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
@@ -466,10 +506,10 @@
       </a-entity>
 
       <a-entity layout="type: dodecahedron; radius: 20">
-        <a-entity mixin="image" material="src: #everglades"></a-entity>
-        <a-entity mixin="image" material="src: #lassen"></a-entity>
-        <a-entity mixin="image" material="src: #pinnacles"></a-entity>
-        <a-entity mixin="image" material="src: #redwoods"></a-entity>
+        <a-entity mixin="image" material="src: #sighVid"></a-entity>
+        <a-entity mixin="image" material="src: #thefeelsVid"></a-entity>
+        <a-entity mixin="image" material="src: #teethaVid"></a-entity>
+        <a-entity mixin="image" material="src: #piggyTexture"></a-entity>
         <a-entity mixin="image" material="src: #sequoia"></a-entity>
         <a-entity mixin="image" material="src: #yosemite"></a-entity>
 
@@ -626,6 +666,7 @@
         <a-cursor></a-cursor>
       </a-camera>
 
+  
     </a-scene> 
   </a-scene>    
      <!--githubcorner-->
