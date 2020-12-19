@@ -6,6 +6,7 @@
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.6/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@4.3.1/dist/aframe-layout-component.min.js"></script>
     <script script.js></script>
     
   </head>
@@ -105,7 +106,28 @@
         scale-on-mouseenter>
         </a-box>
   
-
+        <a-entity layout="type: dodecahedron; radius:  5" position ="0 0 -8">
+          <a-box src="#sighTexture"></a-box>
+          <a-box src="#sighTexture"></a-box>
+          <a-box src="#sighTexture"></a-box>
+          <a-box src="#sighTexture"></a-box>
+          <a-box src="#sighTexture"></a-box>
+          <a-box src="#sighTexture"></a-box>
+          <a-box src="#sighTexture"></a-box>
+          <a-box src="#sighTexture"></a-box>
+          <a-box src="#sighTexture"></a-box>
+          <a-entity geometry="primitive: box" color="tomato"></a-entity>
+          <a-entity geometry="primitive: box" material></a-entity>
+          <a-entity geometry="primitive: box" material></a-entity>
+          <a-entity geometry="primitive: box" material></a-entity>
+          <a-entity geometry="primitive: box" material></a-entity>
+          <a-entity geometry="primitive: box" material></a-entity>
+          <a-entity geometry="primitive: box" material></a-entity>
+          <a-entity geometry="primitive: box" material></a-entity>
+          <a-entity geometry="primitive: box" material></a-entity>
+          <a-entity geometry="primitive: box" material></a-entity>
+          <a-entity geometry="primitive: box" material></a-entity>
+        </a-entity>
 
       <!-- LANDMARK GREEN -->
       <a-sphere color="green" position="-30 -80 80" rotation="0 -45 45" scale="5.5 5.5 5.5"></a-sphere>
@@ -131,7 +153,7 @@
       </a-box>  
 
       <a-cylinder
-        position="1 0.75 -3"
+        position="3 0.75 -3"
         radius="0.5"
         height="1.5"
         color="#FFC65D"
