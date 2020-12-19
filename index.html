@@ -49,12 +49,12 @@
             <img id ="handsupTexture" src="assets/img/handsup.jpg"></img>
             <img id ="hitlerTexture" src="assets/img/hitler.jpg"></img>
             <img id ="jazzhandsTexture" src="assets/img/jazzhands.jpg"></img>
-            <img id =micTexture" src="assets/img/mic.jpg"></img>
+            <img id ="micTexture" src="assets/img/mic.jpg"></img>
             <img id ="noiseTexture" src="assets/img/noise.jpg"></img>
             <img id ="omgTexture" src="assets/img/omg.jpg"></img>
-            <img id ="pfloor" src="assets/img/pfloor.jpg"></img>
+            <img id ="pfloorTexture" src="assets/img/pfloor.jpg"></img>
             <img id ="piggyTexture" src="assets/img/piggy.jpg"></img>
-            <img id ="redlips" src="assets/img/redlips.jpg"></img>
+            <img id ="redlipsTexture" src="assets/img/redlips.jpg"></img>
             <img id ="risefallTexture" src="assets/img/risefall.jpg"></img>
             <img id ="scaryTexture" src="assets/img/scary.jpg"></img>
             <img id ="scratchTexture" src="assets/img/scratch.jpg"></img>
@@ -97,62 +97,359 @@
             </a-entity> -->
 
     <!-- BOX 1 LANDMARK RED -->
-     <a-box color="red" position="30 20 -4" rotation="0 45 45" scale="2 2 2"></a-box>
+     <a-box color="red" position="0 5 -8" rotation="0 45 45" scale="1 1 1"></a-box>
+     <!-- 
+      LANDMARK YELLOW SPHERE-->
+      <a-sphere color="yellow" position="0 4 8" rotation="0 45 45" scale="1 1 1"></a-sphere>
+
+          <!-- LANDMARK ORANGE    -->
+    <a-box color="orange" position="0 3 -3" rotation="0 45 45" scale="1 1 1">
+    </a-box>
+
+
+    <!-- 
+      LANDMARK PINK -->
+      <a-sphere color="pink" position="-15 -50 -8" rotation="0 45 45" scale="3 3 3"></a-sphere>
+
+      <!-- LANDMARK gray -->
+      <a-cyclinder position=".5 -0.75 -3" radius="0.7"  height="2.5"
+      color="#gray""></a-cyclinder>
+
+            <!-- LANDMARK GREEN -->
+            <a-sphere color="green" position="-30 -80 80" rotation="0 -45 45" scale="5.5 5.5 5.5"></a-sphere>
+
+            <a-sphere color="purple" position="-40 50 68" rotation="0 45 45" scale="3 3 3"></a-sphere>
 
 <!-- 
         ONE VIDEO ONLY -->
-        <a-box src="#bdayVid" position="28 18 -3" rotation="0 -45 45" scale="6 6 6"
+        <!-- <a-box src="#bdayVid" position="28 18 -3" rotation="0 -45 45" scale="6 6 6"
         animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
         scale-on-mouseenter>
         </a-box>
-  
+   -->
+   <!-- DODEC 1 WINDOW -->
         <a-entity layout="type: dodecahedron; radius:  5" position ="0 0 -8">
+          <a-box src="#bugeyeTexture"></a-box>
+          <a-box src="#confusedTexture"></a-box>
+          <a-box src="#couchTexture"></a-box>
+          <a-box src="#crosseyeTexture"></a-box>
+          <a-box src="#bossyTexture"></a-box>
+          <a-box src="#elbowTexture"></a-box>
+          <a-box src="#eyerollTexture"></a-box>
+          <a-box src="#fingersTexture"></a-box>
+          <a-box src="#frownTexture"></a-box>
+          <a-box src="#handsTexture"></a-box>
+          <a-box src="#hands2Texture"></a-box>
+          <a-box src="#handsupTexture"></a-box>
+          <a-box src="#jazzhandsTexture"></a-box>
+          <a-box src="#micTexture"></a-box>
+          <a-box src="#noiseTexture"></a-box>
+          <a-box src="#omgTexture"></a-box>
+          <a-box src="#pfloorTexture"></a-box>
+          <a-box src="#piggyTexture"></a-box>
+          <a-box src="#redlipsTexture"></a-box>
+          <a-box src="#scaryTexture"></a-box>
+          <a-box src="#scratchTexture"></a-box>
           <a-box src="#sighTexture"></a-box>
-          <a-box src="#sighTexture"></a-box>
-          <a-box src="#sighTexture"></a-box>
-          <a-box src="#sighTexture"></a-box>
-          <a-box src="#sighTexture"></a-box>
-          <a-box src="#sighTexture"></a-box>
-          <a-box src="#sighTexture"></a-box>
-          <a-box src="#sighTexture"></a-box>
-          <a-box src="#sighTexture"></a-box>
-          <a-entity geometry="primitive: box" color="tomato"></a-entity>
-          <a-entity geometry="primitive: box" material></a-entity>
-          <a-entity geometry="primitive: box" material></a-entity>
-          <a-entity geometry="primitive: box" material></a-entity>
-          <a-entity geometry="primitive: box" material></a-entity>
-          <a-entity geometry="primitive: box" material></a-entity>
-          <a-entity geometry="primitive: box" material></a-entity>
-          <a-entity geometry="primitive: box" material></a-entity>
-          <a-entity geometry="primitive: box" material></a-entity>
-          <a-entity geometry="primitive: box" material></a-entity>
-          <a-entity geometry="primitive: box" material></a-entity>
+          <a-box src="#squishTexture"></a-box>
+          <a-box src="#tiredTexture"></a-box>
+          <a-box src="#windowTexture"></a-box>
         </a-entity>
 
-      <!-- LANDMARK GREEN -->
-      <a-sphere color="green" position="-30 -80 80" rotation="0 -45 45" scale="5.5 5.5 5.5"></a-sphere>
+
+
+<!-- DODEC2 UMBRELLA -->
+
+      <a-entity layout="type: dodecahedron; radius:  5" position ="-8 0 -4">
+        <a-box src="#bugeyeTexture"></a-box>
+        <a-box src="#confusedTexture"></a-box>
+        <a-box src="#couchTexture"></a-box>
+        <a-box src="#crosseyeTexture"></a-box>
+        <a-box src="#bossyTexture"></a-box>
+        <a-box src="#elbowTexture"></a-box>
+        <a-box src="#eyerollTexture"></a-box>
+        <a-box src="#fingersTexture"></a-box>
+        <a-box src="#frownTexture"></a-box>
+        <a-box src="#handsTexture"></a-box>
+        <a-box src="#hands2Texture"></a-box>
+        <a-box src="#handsupTexture"></a-box>
+        <a-box src="#jazzhandsTexture"></a-box>
+        <a-box src="#micTexture"></a-box>
+        <a-box src="#noiseTexture"></a-box>
+        <a-box src="#omgTexture"></a-box>
+        <a-box src="#pfloorTexture"></a-box>
+        <a-box src="#piggyTexture"></a-box>
+        <a-box src="#redlipsTexture"></a-box>
+        <a-box src="#scaryTexture"></a-box>
+        <a-box src="#scratchTexture"></a-box>
+        <a-box src="#sighTexture"></a-box>
+        <a-box src="#squishTexture"></a-box>
+        <a-box src="#tiredTexture"></a-box>
+        <a-box src="#umbrellaTexture"></a-box>
+      </a-entity>
+
+
+
+<!-- DODEC 3 CHURCH-->
+      <a-entity layout="type: dodecahedron; radius:  5" position ="-12 0 0">
+        <a-box src="#bugeyeTexture"></a-box>
+        <a-box src="#confusedTexture"></a-box>
+        <a-box src="#couchTexture"></a-box>
+        <a-box src="#crosseyeTexture"></a-box>
+        <a-box src="#bossyTexture"></a-box>
+        <a-box src="#elbowTexture"></a-box>
+        <a-box src="#eyerollTexture"></a-box>
+        <a-box src="#fingersTexture"></a-box>
+        <a-box src="#frownTexture"></a-box>
+        <a-box src="#handsTexture"></a-box>
+        <a-box src="#hands2Texture"></a-box>
+        <a-box src="#handsupTexture"></a-box>
+        <a-box src="#jazzhandsTexture"></a-box>
+        <a-box src="#micTexture"></a-box>
+        <a-box src="#noiseTexture"></a-box>
+        <a-box src="#omgTexture"></a-box>
+        <a-box src="#pfloorTexture"></a-box>
+        <a-box src="#piggyTexture"></a-box>
+        <a-box src="#redlipsTexture"></a-box>
+        <a-box src="#scaryTexture"></a-box>
+        <a-box src="#scratchTexture"></a-box>
+        <a-box src="#sighTexture"></a-box>
+        <a-box src="#squishTexture"></a-box>
+        <a-box src="#tiredTexture"></a-box>
+        <a-box src="#churchTexture"></a-box>
+      </a-entity>
+
+
+      <!-- DODEC 4 BORIS CHURCH -->
+      <a-entity layout="type: dodecahedron; radius:  5" position ="-16 0 4">
+        <a-box src="#bugeyeTexture"></a-box>
+        <a-box src="#confusedTexture"></a-box>
+        <a-box src="#couchTexture"></a-box>
+        <a-box src="#crosseyeTexture"></a-box>
+        <a-box src="#bossyTexture"></a-box>
+        <a-box src="#elbowTexture"></a-box>
+        <a-box src="#eyerollTexture"></a-box>
+        <a-box src="#fingersTexture"></a-box>
+        <a-box src="#frownTexture"></a-box>
+        <a-box src="#handsTexture"></a-box>
+        <a-box src="#hands2Texture"></a-box>
+        <a-box src="#handsupTexture"></a-box>
+        <a-box src="#jazzhandsTexture"></a-box>
+        <a-box src="#micTexture"></a-box>
+        <a-box src="#noiseTexture"></a-box>
+        <a-box src="#omgTexture"></a-box>
+        <a-box src="#pfloorTexture"></a-box>
+        <a-box src="#piggyTexture"></a-box>
+        <a-box src="#redlipsTexture"></a-box>
+        <a-box src="#scaryTexture"></a-box>
+        <a-box src="#scratchTexture"></a-box>
+        <a-box src="#sighTexture"></a-box>
+        <a-box src="#squishTexture"></a-box>
+        <a-box src="#tiredTexture"></a-box>
+        <a-box src="#borischurchTexture"></a-box>
+      </a-entity>
+
+       <!-- DODEC 5 Hitler-->
+       <a-entity layout="type: dodecahedron; radius:  5" position ="-8 0 8">
+        <a-box src="#bugeyeTexture"></a-box>
+        <a-box src="#confusedTexture"></a-box>
+        <a-box src="#couchTexture"></a-box>
+        <a-box src="#crosseyeTexture"></a-box>
+        <a-box src="#bossyTexture"></a-box>
+        <a-box src="#elbowTexture"></a-box>
+        <a-box src="#eyerollTexture"></a-box>
+        <a-box src="#fingersTexture"></a-box>
+        <a-box src="#frownTexture"></a-box>
+        <a-box src="#handsTexture"></a-box>
+        <a-box src="#hands2Texture"></a-box>
+        <a-box src="#handsupTexture"></a-box>
+        <a-box src="#jazzhandsTexture"></a-box>
+        <a-box src="#micTexture"></a-box>
+        <a-box src="#noiseTexture"></a-box>
+        <a-box src="#omgTexture"></a-box>
+        <a-box src="#pfloorTexture"></a-box>
+        <a-box src="#piggyTexture"></a-box>
+        <a-box src="#redlipsTexture"></a-box>
+        <a-box src="#scaryTexture"></a-box>
+        <a-box src="#scratchTexture"></a-box>
+        <a-box src="#sighTexture"></a-box>
+        <a-box src="#squishTexture"></a-box>
+        <a-box src="#tiredTexture"></a-box>
+        <a-box src="#hitlerTexture"></a-box>
+      </a-entity>
+
+      <!-- DODEC 6 Redlips-->
+      <a-entity layout="type: dodecahedron; radius:  5" position ="0 0 12">
+        <a-box src="#bugeyeTexture"></a-box>
+        <a-box src="#confusedTexture"></a-box>
+        <a-box src="#couchTexture"></a-box>
+        <a-box src="#crosseyeTexture"></a-box>
+        <a-box src="#bossyTexture"></a-box>
+        <a-box src="#elbowTexture"></a-box>
+        <a-box src="#eyerollTexture"></a-box>
+        <a-box src="#fingersTexture"></a-box>
+        <a-box src="#frownTexture"></a-box>
+        <a-box src="#handsTexture"></a-box>
+        <a-box src="#hands2Texture"></a-box>
+        <a-box src="#handsupTexture"></a-box>
+        <a-box src="#jazzhandsTexture"></a-box>
+        <a-box src="#micTexture"></a-box>
+        <a-box src="#noiseTexture"></a-box>
+        <a-box src="#omgTexture"></a-box>
+        <a-box src="#pfloorTexture"></a-box>
+        <a-box src="#piggyTexture"></a-box>
+        <a-box src="#redlipsTexture"></a-box>
+        <a-box src="#scaryTexture"></a-box>
+        <a-box src="#scratchTexture"></a-box>
+        <a-box src="#sighTexture"></a-box>
+        <a-box src="#squishTexture"></a-box>
+        <a-box src="#tiredTexture"></a-box>
+        <a-box src="#redlipsTexture"></a-box>
+      </a-entity>
+
+          <!-- DODEC 6 handsup-->
+          <a-entity layout="type: dodecahedron; radius:  5" position ="-8 0 20">
+            <a-box src="#bugeyeTexture"></a-box>
+            <a-box src="#confusedTexture"></a-box>
+            <a-box src="#couchTexture"></a-box>
+            <a-box src="#crosseyeTexture"></a-box>
+            <a-box src="#bossyTexture"></a-box>
+            <a-box src="#elbowTexture"></a-box>
+            <a-box src="#eyerollTexture"></a-box>
+            <a-box src="#fingersTexture"></a-box>
+            <a-box src="#frownTexture"></a-box>
+            <a-box src="#handsTexture"></a-box>
+            <a-box src="#hands2Texture"></a-box>
+            <a-box src="#handsupTexture"></a-box>
+            <a-box src="#jazzhandsTexture"></a-box>
+            <a-box src="#micTexture"></a-box>
+            <a-box src="#noiseTexture"></a-box>
+            <a-box src="#omgTexture"></a-box>
+            <a-box src="#pfloorTexture"></a-box>
+            <a-box src="#piggyTexture"></a-box>
+            <a-box src="#redlipsTexture"></a-box>
+            <a-box src="#scaryTexture"></a-box>
+            <a-box src="#scratchTexture"></a-box>
+            <a-box src="#sighTexture"></a-box>
+            <a-box src="#squishTexture"></a-box>
+            <a-box src="#tiredTexture"></a-box>
+            <a-box src="#handsupTexture"></a-box>
+          </a-entity>
+
+<!-- DODEC 7 frown -->
+<a-entity layout="type: dodecahedron; radius:  5" position ="0 0 8">
+  <a-box src="#bugeyeTexture"></a-box>
+  <a-box src="#confusedTexture"></a-box>
+  <a-box src="#couchTexture"></a-box>
+  <a-box src="#crosseyeTexture"></a-box>
+  <a-box src="#bossyTexture"></a-box>
+  <a-box src="#elbowTexture"></a-box>
+  <a-box src="#eyerollTexture"></a-box>
+  <a-box src="#fingersTexture"></a-box>
+  <a-box src="#frownTexture"></a-box>
+  <a-box src="#handsTexture"></a-box>
+  <a-box src="#hands2Texture"></a-box>
+  <a-box src="#handsupTexture"></a-box>
+  <a-box src="#jazzhandsTexture"></a-box>
+  <a-box src="#micTexture"></a-box>
+  <a-box src="#noiseTexture"></a-box>
+  <a-box src="#omgTexture"></a-box>
+  <a-box src="#pfloorTexture"></a-box>
+  <a-box src="#piggyTexture"></a-box>
+  <a-box src="#redlipsTexture"></a-box>
+  <a-box src="#scaryTexture"></a-box>
+  <a-box src="#scratchTexture"></a-box>
+  <a-box src="#sighTexture"></a-box>
+  <a-box src="#squishTexture"></a-box>
+  <a-box src="#tiredTexture"></a-box>
+  <a-box src="#frownTexture"></a-box>
+</a-entity>
+
+
+
+<!-- DODEC 8 bugeye -->
+<a-entity layout="type: dodecahedron; radius:  5" position ="8 0 0">
+  <a-box src="#bugeyeTexture"></a-box>
+  <a-box src="#confusedTexture"></a-box>
+  <a-box src="#couchTexture"></a-box>
+  <a-box src="#crosseyeTexture"></a-box>
+  <a-box src="#bossyTexture"></a-box>
+  <a-box src="#elbowTexture"></a-box>
+  <a-box src="#eyerollTexture"></a-box>
+  <a-box src="#fingersTexture"></a-box>
+  <a-box src="#frownTexture"></a-box>
+  <a-box src="#handsTexture"></a-box>
+  <a-box src="#hands2Texture"></a-box>
+  <a-box src="#handsupTexture"></a-box>
+  <a-box src="#jazzhandsTexture"></a-box>
+  <a-box src="#micTexture"></a-box>
+  <a-box src="#noiseTexture"></a-box>
+  <a-box src="#omgTexture"></a-box>
+  <a-box src="#pfloorTexture"></a-box>
+  <a-box src="#piggyTexture"></a-box>
+  <a-box src="#redlipsTexture"></a-box>
+  <a-box src="#scaryTexture"></a-box>
+  <a-box src="#scratchTexture"></a-box>
+  <a-box src="#sighTexture"></a-box>
+  <a-box src="#squishTexture"></a-box>
+  <a-box src="#tiredTexture"></a-box>
+  <a-box src="#bugeyeTexture"></a-box>
+</a-entity>
+
+
+<!-- DODEC 9 omg -->
+<a-entity layout="type: dodecahedron; radius:  5" position ="8 0 0">
+  <a-box src="#bugeyeTexture"></a-box>
+  <a-box src="#confusedTexture"></a-box>
+  <a-box src="#couchTexture"></a-box>
+  <a-box src="#crosseyeTexture"></a-box>
+  <a-box src="#bossyTexture"></a-box>
+  <a-box src="#elbowTexture"></a-box>
+  <a-box src="#eyerollTexture"></a-box>
+  <a-box src="#fingersTexture"></a-box>
+  <a-box src="#frownTexture"></a-box>
+  <a-box src="#handsTexture"></a-box>
+  <a-box src="#hands2Texture"></a-box>
+  <a-box src="#handsupTexture"></a-box>
+  <a-box src="#jazzhandsTexture"></a-box>
+  <a-box src="#micTexture"></a-box>
+  <a-box src="#noiseTexture"></a-box>
+  <a-box src="#omgTexture"></a-box>
+  <a-box src="#pfloorTexture"></a-box>
+  <a-box src="#piggyTexture"></a-box>
+  <a-box src="#redlipsTexture"></a-box>
+  <a-box src="#scaryTexture"></a-box>
+  <a-box src="#scratchTexture"></a-box>
+  <a-box src="#sighTexture"></a-box>
+  <a-box src="#squishTexture"></a-box>
+  <a-box src="#tiredTexture"></a-box>
+  <a-box src="#omgTexture"></a-box>
+</a-entity>
+
+
+
 
 
         <!-- SIGH BOX -->
-      <a-box position="-8 -8 -8" multisrc="src0:#sighTexture; src1:#sighTexture; src2:#sighTexture; src3:#sighTexture; src4:#sighTexture; src5:#sighTexture;" 
+      <!-- <a-box position="-8 -8 -8" multisrc="src0:#sighTexture; src1:#sighTexture; src2:#sighTexture; src3:#sighTexture; src4:#sighTexture; src5:#sighTexture;" 
       opacity=".9" scale="5 5 5" animation="property: object3D.position.xyz; to: 1.1; dir: alternate; dur: 20000; loop: true"
       scale-on-mouseenter>    
       <a-text
       id="boxText"value="This is about feeling exasperated in a a ZoomBox" align="center" color="#FFF"
       visible="true" position="-2.1 -3 1" geometry="primitive: plane; width: 2.75" material="color: #333"
-      ></a-text></a-box>  
+      ></a-text></a-box>   -->
 
         <!-- COFFEE BOx -->
-      <a-box position="-2 -3 -1" multisrc="src0:#coffeeVid; src1:#coffeeVid; src2:#coffeeVid; src3:#coffeeVid src4:#coffeeVid; src5:#coffeVid;" 
+      <!-- <a-box position="-2 -3 -1" multisrc="src0:#coffeeVid; src1:#coffeeVid; src2:#coffeeVid; src3:#coffeeVid src4:#coffeeVid; src5:#coffeVid;" 
         opacity=".9" scale="2 2 2" animation="property: object3D.position.xyz; to: 1.1; dir: alternate; dur: 20000; loop: true"
         scale-on-mouseenter>
       <a-text
         id="boxText"value="This is a cube about having coffee on Zoom" align="center" color="#FFF"
         visible="true" position="-2.1 -3 1" geometry="primitive: plane; width: 2.75" material="color: #333"
         ></a-text>
-      </a-box>  
+      </a-box>   -->
 
-      <a-cylinder
+      <!-- <a-cylinder
         position="3 0.75 -3"
         radius="0.5"
         height="1.5"
@@ -170,11 +467,9 @@
           geometry="primitive: plane; width: 1.75"
           material="color: #333"
         ></a-text>
-      </a-cylinder>
+      </a-cylinder> -->
 
-    <!-- LANDMARK ORANGE    -->
-    <a-box color="orange" position="-20 20 -30" rotation="0 45 45" scale="4 4 4">
-    </a-box>
+
 
 
       <!-- <a-box src="#scratchTexture" position="-22 22 -32" rotation="0 45 45" scale="2 2 2"
@@ -185,7 +480,7 @@
       
       <!-- LANDMARK PURPLE -->
 
-     <a-sphere color="purple" position="-40 50 68" rotation="0 45 45" scale="3 3 3"></a-sphere>
+
 
       <!-- <a-box src="#omgTexture" position="-38 48 66" rotation="0 -90 45" scale="3 3 3"
       animation="property: object3D.position.y; to: 1.1; dir: alternate; dur: 20000; loop: true"
@@ -194,9 +489,6 @@
 
 
 
-      <!-- LANDMARK gray -->
-      <a-cyclinder position=".5 -0.75 -3" radius="0.7"  height="2.5"
-      color="#gray""></a-cyclinder>
 
   
       <!-- <a-box
@@ -215,9 +507,7 @@
       animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave"></a-box> -->
 
 
-<!-- 
-      LANDMARK PINK -->
-      <a-sphere color="pink" position="-15 -50 -8" rotation="0 45 45" scale="3 3 3"></a-sphere>
+
     
 
       <!-- <a-box 
@@ -226,9 +516,7 @@
       animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
       </a-box> -->
             
-<!-- 
-      LANDMARK YELLOW -->
-      <a-sphere color="yellow" position="-1 -50 -8" rotation="0 45 45" scale="3 3 3"></a-sphere>
+
 <!-- 
       MULTI BOX @ ALL FACE VID = MOUSE-ENTER/LV ANIMATION
       <a-box position="-1.5 -48.5 -7.5" multisrc="src0:#crazyVid; src1:#teethaVid; src2:#thefeelsVid; src3:#coffeeVid; src4:#bdayVid; src5:#weirdnessVid;"
