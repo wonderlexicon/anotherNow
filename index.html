@@ -14,8 +14,7 @@
     <!-- 20 secs to load else you aint gonna be included . -->
     <a-scene>
      <a-assets timeout="20000"></a-assets> 
-            <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline> <source type="application/x-mpegurl"> <source type="video/mp4" src="assets/video/bday.mp4"></video>
-
+            <!-- <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline> <source type="application/x-mpegurl"> <source type="video/mp4" src="assets/video/bday.mp4"></video> -->
             <audio id="waterAud" src="assets/audio/watersounds.wav"></audio>
             <audio id="layerAud" src="assets/audio/layeredchant.wav"></audio> 
             <audio id="daydreamAud" src="assets/audio/daydream.mp3" autoplay></audio>
@@ -70,40 +69,42 @@
         </a-assets>
 
 
-        <a-entity environment= "presets:egypt"></a-entity>
+        <a-entity environment= "presets:egypt"></a-entity>     
+         <a-sky color="#BF8706"></a-sky>
+
         <!-- <a-entity><gridColor="1b1811"  groundcolor="#8A8F83" skyType="gradient" skyColor="#8a5668" shadow="true" shadowSize="3" fog="2" lightposition="0.4"></a-entity>> -->
-        <script src="arrow-key-rotation.js"></script>
-        <script src="play-on-window-click.js"></script>
-        <script src="play-on-vrdisplayactivate-or-enter-vr.js"></script>
+        <!-- <script src="arrow-key-rotation.js"></script>
+        <script src="play-on-window-click.js"></script> -->
+        <!-- <script src="play-on-vrdisplayactivate-or-enter-vr.js"></script> -->
     
         <!-- Specify our scene. -->
-        <a-scene stats>
+        <!-- <a-scene stats> -->
           <!-- The original example also has this 180 degree rotation, to appear to be going forward. -->
-          <a-videosphere rotation="0 180 0" src="#video" 
+          <a-videosphere rotation="0 180 0" src="#overitVid" 
                          play-on-window-click
                          play-on-vrdisplayactivate-or-enter-vr>
           </a-videosphere>
           
           <!-- Define camera with zero user height, movement disabled and arrow key rotation added. -->
-          <a-camera user-height="0" wasd-controls-enabled="false" arrow-key-rotation>
+          <!-- <a-camera user-height="0" wasd-controls-enabled="false" arrow-key-rotation> -->
             <!-- Text elements for display messaging. -->
-            <a-entity id="msg" position="0 -0.3 -1.5" text="align:center; 
+            <!-- <a-entity id="msg" position="0 -0.3 -1.5" text="align:center; 
                     width:3;
                     wrapCount:100;
                     color:red;
                     value:Click window to make the video play, if needed.">
-            </a-entity>
+            </a-entity> -->
 
     <!-- BOX 1 LANDMARK RED -->
      <a-box color="red" position="30 20 -4" rotation="0 45 45" scale="2 2 2"></a-box>
 
 <!-- 
-        ONE VIDEO ONLY
+        ONE VIDEO ONLY -->
         <a-box src="#bdayVid" position="28 18 -3" rotation="0 -45 45" scale="6 6 6"
         animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
         scale-on-mouseenter>
         </a-box>
-   -->
+  
 
 
       <!-- LANDMARK GREEN -->
@@ -152,9 +153,9 @@
     <!-- LANDMARK ORANGE    -->
     <a-box color="orange" position="-20 20 -30" rotation="0 45 45" scale="4 4 4">
     </a-box>
-<!-- 
 
-      <a-box src="#scratchTexture" position="-22 22 -32" rotation="0 45 45" scale="2 2 2"
+
+      <!-- <a-box src="#scratchTexture" position="-22 22 -32" rotation="0 45 45" scale="2 2 2"
       animation="property: object3D.position.y; to: 0.2; dir: alternate; dur: 2000; loop: true"
       scale-on-mouseenter>
       </a-box> -->
@@ -248,10 +249,6 @@
       <a-camera>
         <a-cursor></a-cursor>
       </a-camera>
-      <a-sky color="#BF8706"></a-sky>
-
-      
-   
 
     </a-scene> 
     </a-scene>
