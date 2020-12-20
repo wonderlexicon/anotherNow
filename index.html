@@ -24,19 +24,20 @@
      material="shader: flat; side: double" look-at="[camera]"></a-mixin>
      <a-mixin id="image" geometry="primitive: plane; height: 5; width: 5"
      material="shader: flat; side: double" look-at="[camera]"></a-mixin>
-            <!-- <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline> <source type="application/x-mpegurl"> <source type="video/mp4" src="assets/video/bday.mp4"></video> -->
+            <!-- <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline> <source type="application/x-mpegurl"> <source type="video/mp4" src="assets/video/bdaysong.mp4"></video> -->
             <video id ="marketVid" src="assets/video/market.mp4" autoplay = true loop = true preload = true></video>
             <video id ="coachVid" src="assets/video/coach.mp4" autoplay = true loop = true preload = true></video>
             <video id ="coffeeVid" src="assets/video/coffee.mp4" autoplay = true loop = true preload = true></video>
             <video id ="overitVid" src="assets/video/overit.mp4" autoplay = true loop = true preload = true></video>
             <video id ="teethaVid" src="assets/video/teetha.mp4" autoplay = true loop = true preload = true></video>
             <video id ="brainfryVid" src="assets/video/brainfry.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="bdayVid" src="assets/video/bday.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="bdaysongVid" src="assets/video/bdaysong.mp4" autoplay = true loop = true preload = true></video>
             <video id ="crazyVid" src= "assets/video/crazy.mp4" autoplay = true loop = true preload = true></video>
             <video id ="thefeelsVid" src="assets/video/thefeels.mp4" autoplay = true loop = true preload = true></video>
             <video id ="turkeydayVid" src="assets/video/turkeyday.mp4" autoplay = true loop = true preload = true></video>
             <video id ="weirdnessVid" src="assets/video/weirdness.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="sighVid" src="assets/video/sigh.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="bushfireVid" src="assets/video/bushfire.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="beirutVid" src="assets/video/beirut.mp4" autoplay = true loop = true preload = true></video>
             <img id ="churchTexture" src="assets/img/church.jpg"></img>
             <img id ="borischurchTexture" src="assets/img/borischurch.jpg"></img>
             <img id ="bossyTexture" src="assets/img/bossy.jpg"></img>
@@ -188,7 +189,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       </a-entity>
 
 
-        <!-- <a-box src="#bdayVid" position="28 18 -3" rotation="0 -45 45" scale="6 6 6"
+        <!-- <a-box src="#bdaysongVid" position="28 18 -3" rotation="0 -45 45" scale="6 6 6"
         animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
         scale-on-mouseenter>
         </a-box> -->
@@ -504,28 +505,28 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       </a-entity>
 
       <a-entity layout="type: dodecahedron; radius: 20">
-        <a-entity mixin="video" material="src: #turkeydayVid"></a-entity>
+        <a-entity mixin="video" material="src: #bushfireVid"></a-entity>
         <a-entity mixin="video" material="src: #teethaVid"></a-entity>
-        <a-entity mixin="video" material="src: #brainfryVid"></a-entity>
-        <a-entity mixin="video" material="src: #bdayVid"></a-entity>
-        <a-entity mixin="video" material="src: #sighVid"></a-entity>
+        <a-entity mixin="video" material="src: #thefeelsVid"></a-entity>
+        <a-entity mixin="video" material="src: #coffeeVid"></a-entity>
+        <a-entity mixin="video" material="src: #marketVid"></a-entity>
         <a-entity mixin="video" material="src: #weirdnessVid"></a-entity>
 
         <a-entity mixin="video" material="src: #marketVid"></a-entity>
         <a-entity mixin="video" material="src: #teethaVid"></a-entity>
+        <a-entity mixin="video" material="src: #coachVid"></a-entity>
+        <a-entity mixin="video" material="src: #turkeydayVid"></a-entity>
+        <a-entity mixin="video" material="src: #beirutVid"></a-entity>
         <a-entity mixin="video" material="src: #brainfryVid"></a-entity>
-        <a-entity mixin="video" material="src: #crazyVid"></a-entity>
-        <a-entity mixin="video" material="src: #overitVid"></a-entity>
-        <a-entity mixin="video" material="src: #coffeeVid"></a-entity>
 
-        <a-entity mixin="video" material="src: #marketVid"></a-entity>
-        <a-entity mixin="video" material="src: #bdayVid"></a-entity>
-        <a-entity mixin="video" material="src: #brainfryVid"></a-entity>
+        <a-entity mixin="video" material="src: #crazyVid"></a-entity>
+        <a-entity mixin="video" material="src: #coachVid"></a-entity>
+        <a-entity mixin="video" material="src: #coffeeVid"></a-entity>
         <a-entity mixin="video" material="src: #thefeelsVid"></a-entity>
         <a-entity mixin="video" material="src: #overitVid"></a-entity>
         <a-entity mixin="video" material="src: #weirdnessVid"></a-entity>
 
-        <a-entity mixin="video" material="src: #coachVid"></a-entity>
+        <a-entity mixin="video" material="src: #teethaVid"></a-entity>
         <a-entity mixin="video" material="src: #coffeeVid"></a-entity>
       </a-entity>
 
@@ -615,7 +616,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
     
 
       <!-- <a-box 
-      position="-14 -48 -7" multisrc="src0:#overitVid; src1:#bdayVid; src2:#thefeelsVid; src3:#coffeeVid; src4:#overitVid; src5:#turkeydayVid;"
+      position="-14 -48 -7" multisrc="src0:#overitVid; src1:#bdaysongVid; src2:#thefeelsVid; src3:#coffeeVid; src4:#overitVid; src5:#turkeydayVid;"
       opacity=".9" scale="4 4 4"
       animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
       </a-box> -->
@@ -623,7 +624,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
 
 <!-- 
       MULTI BOX @ ALL FACE VID = MOUSE-ENTER/LV ANIMATION
-      <a-box position="-1.5 -48.5 -7.5" multisrc="src0:#crazyVid; src1:#teethaVid; src2:#thefeelsVid; src3:#coffeeVid; src4:#bdayVid; src5:#weirdnessVid;"
+      <a-box position="-1.5 -48.5 -7.5" multisrc="src0:#crazyVid; src1:#teethaVid; src2:#thefeelsVid; src3:#coffeeVid; src4:#bdaysongVid; src5:#weirdnessVid;"
       opacity=".9" scale="4 4 4" animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
       animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
       animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave">
