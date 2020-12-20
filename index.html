@@ -30,6 +30,7 @@
             <video id ="coffeeVid" src="assets/video/coffee.mp4" autoplay = true loop = true preload = true></video>
             <video id ="overitVid" src="assets/video/overit.mp4" autoplay = true loop = true preload = true></video>
             <video id ="teethaVid" src="assets/video/teetha.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="brainfryVid" src="assets/video/brainfry.mp4" autoplay = true loop = true preload = true></video>
             <video id ="bdayVid" src="assets/video/bday.mp4" autoplay = true loop = true preload = true></video>
             <video id ="crazyVid" src= "assets/video/crazy.mp4" autoplay = true loop = true preload = true></video>
             <video id ="thefeelsVid" src="assets/video/thefeels.mp4" autoplay = true loop = true preload = true></video>
@@ -68,10 +69,6 @@
             <img id ="tiredTexture" src="assets/img/tired.jpg"></img>
             <img id ="umbrellaTexture" src="assets/img/umbrella.jpg"></img>
             <img id ="windowTexture" src="assets/img/window.jpg"></img>
-            <img id="pinnacles" src="../img/pinnacles.jpg">
-            <img id="redwoods" src="../img/redwoods.jpg">
-            <img id="sequoia" src="../img/sequoia.jpg">
-            <img id="yosemite" src="../img/yosemite.jpg">
             <audio id="waterAud" src="assets/audio/watersounds.wav"></audio>
             <audio id="layerAud" src="assets/audio/layeredchant.wav"></audio> 
             <audio id="daydreamAud" src="assets/audio/daydream.mp3" autoplay></audio>
@@ -97,7 +94,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <!-- Specify our scene. -->
         <!-- <a-scene stats> -->
           <!-- The original example also has this 180 degree rotation, to appear to be going forward. -->
-          <a-videosphere rotation="0 180 0" src="#overitVid" 
+          <a-videosphere rotation="0 180 0" src="#marketVid" 
                          play-on-window-click
                          play-on-vrdisplayactivate-or-enter-vr>
           </a-videosphere>
@@ -407,7 +404,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src="#sighTexture"></a-box>
         <a-box src="#squishTexture"></a-box>
         <a-box src="#tiredTexture"></a-box>
-        <a-box src="#handsupTexture"></a-box>
+        <a-box src="#coffeeVid"></a-box>
       </a-entity>
 
 <!-- DODEC 7 frown -->
@@ -507,29 +504,29 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       </a-entity>
 
       <a-entity layout="type: dodecahedron; radius: 20">
+        <a-entity mixin="video" material="src: #turkeydayVid"></a-entity>
+        <a-entity mixin="video" material="src: #teethaVid"></a-entity>
+        <a-entity mixin="video" material="src: #brainfryVid"></a-entity>
+        <a-entity mixin="video" material="src: #bdayVid"></a-entity>
+        <a-entity mixin="video" material="src: #sighVid"></a-entity>
+        <a-entity mixin="video" material="src: #weirdnessVid"></a-entity>
+
         <a-entity mixin="video" material="src: #marketVid"></a-entity>
         <a-entity mixin="video" material="src: #teethaVid"></a-entity>
+        <a-entity mixin="video" material="src: #brainfryVid"></a-entity>
         <a-entity mixin="video" material="src: #crazyVid"></a-entity>
-        <a-entity mixin="video" material="src: #turkeydayVid"></a-entity>
+        <a-entity mixin="video" material="src: #overitVid"></a-entity>
+        <a-entity mixin="video" material="src: #coffeeVid"></a-entity>
+
+        <a-entity mixin="video" material="src: #marketVid"></a-entity>
+        <a-entity mixin="video" material="src: #bdayVid"></a-entity>
+        <a-entity mixin="video" material="src: #brainfryVid"></a-entity>
+        <a-entity mixin="video" material="src: #thefeelsVid"></a-entity>
         <a-entity mixin="video" material="src: #overitVid"></a-entity>
         <a-entity mixin="video" material="src: #weirdnessVid"></a-entity>
 
-        <a-entity mixin="video" material="src: #coffeeVid"></a-entity>
-        <a-entity mixin="video" material="src: #teethaVid"></a-entity>
-        <a-entity mixin="video" material="src: #bdayVid"></a-entity>
         <a-entity mixin="video" material="src: #coachVid"></a-entity>
-        <a-entity mixin="video" material="src: #overitVid"></a-entity>
-        <a-entity mixin="image" material="src: #yosemite"></a-entity>
-
-        <a-entity mixin="video" material="src: #turkeydayVid"></a-entity>
-        <a-entity mixin="image" material="src: #lassen"></a-entity>
-        <a-entity mixin="image" material="src: #pinnacles"></a-entity>
-        <a-entity mixin="image" material="src: #redwoods"></a-entity>
-        <a-entity mixin="image" material="src: #overitVid"></a-entity>
-        <a-entity mixin="image" material="src: #yosemite"></a-entity>
-
-        <a-entity mixin="image" material="src: #everglades"></a-entity>
-        <a-entity mixin="image" material="src: #lassen"></a-entity>
+        <a-entity mixin="video" material="src: #coffeeVid"></a-entity>
       </a-entity>
 
       <a-entity position="0 0 0">
