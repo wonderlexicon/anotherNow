@@ -1,5 +1,6 @@
 <html></html>
   <head>
+    <title>Screentime</title>
     <meta name="description" content="20-sided layout of images facing camera"></meta>
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
     <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.min.js"></script>
@@ -18,12 +19,13 @@
 
     <!-- 20 secs to load else you aint gonna be included . -->
      <a-assets timeout="20000"></a-assets> 
-     <a-mixin id="image" geometry="primitive: plane; height: 5; width: 5"
-     material="shader: flat; side: double" look-at="[camera]"></a-mixin>
      <a-mixin id="video" geometry="primitive: plane; height: 5; width: 5"
      material="shader: flat; side: double" look-at="[camera]"></a-mixin>
+     <a-mixin id="image" geometry="primitive: plane; height: 5; width: 5"
+     material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             <!-- <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline> <source type="application/x-mpegurl"> <source type="video/mp4" src="assets/video/bday.mp4"></video> -->
-            <img id="lassen" src="../img/lassen.jpg">
+            <video id="marketVid" src="assets/video/market.mp4" autoplay = true loop = true preload = true></video>
+            <video id="coachvid" src="assets/video/coachvid.mp4" autoplay = true loop = true preload = true></video>
             <img id="pinnacles" src="../img/pinnacles.jpg">
             <img id="redwoods" src="../img/redwoods.jpg">
             <img id="sequoia" src="../img/sequoia.jpg">
@@ -156,37 +158,37 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "0 50 -8" scale="3 3 3"
-       light="type: point; intensity: 2">
+       light="type: point; intensity: .1">
        </a-entity> 
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "0 -50 -8" scale="3 3 3"
-       light="type: point; intensity: 2">
+       light="type: point; intensity: .1">
        </a-entity> 
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "50 0 -8" scale="3 3 3"
-       light="type: point; intensity: 2">
+       light="type: point; intensity: .1">
        </a-entity> 
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "-50 0 -8" scale="3 3 3"
-       light="type: point; intensity: 2">
+       light="type: point; intensity: .1">
        </a-entity>
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "50 5 -20"
-       light="type: point; intensity: 2">
+       light="type: point; intensity: .1">
        </a-entity> 
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "15 5 10"
-       light="type: point; intensity: 2">
+       light="type: point; intensity: .1">
        </a-entity>
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "-15 5 10"
-       light="type: point; intensity: 2">
+       light="type: point; intensity: .1">
       </a-entity>
 
 
@@ -506,12 +508,12 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       </a-entity>
 
       <a-entity layout="type: dodecahedron; radius: 20">
-        <a-entity mixin="image" material="src: #sighVid"></a-entity>
-        <a-entity mixin="image" material="src: #thefeelsVid"></a-entity>
-        <a-entity mixin="image" material="src: #teethaVid"></a-entity>
-        <a-entity mixin="image" material="src: #piggyTexture"></a-entity>
-        <a-entity mixin="image" material="src: #sequoia"></a-entity>
-        <a-entity mixin="image" material="src: #yosemite"></a-entity>
+        <a-entity mixin="video" material="src: #coachVid"></a-entity>
+        <a-entity mixin="video" material="src: #thefeelsVid"></a-entity>
+        <a-entity mixin="video" material="src: #teethaVid"></a-entity>
+        <a-entity mixin="video" material="src: #piggyTexture"></a-entity>
+        <a-entity mixin="video" material="src: #marketVid"></a-entity>
+        <a-entity mixin="video" material="src: #weirdnessVid"></a-entity>
 
         <a-entity mixin="image" material="src: #everglades"></a-entity>
         <a-entity mixin="image" material="src: #lassen"></a-entity>
