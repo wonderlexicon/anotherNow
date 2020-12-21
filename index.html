@@ -10,13 +10,12 @@
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.6/dist/aframe-extras.min.js"></script>
-    <script script.js></script>
+    <script src="scripts.js"></script>
     
   </head>
   <body>
     <a-scene background = "color: navy" >
-      <a-entity environment= "presets:egypt"></a-entity>     
-     <a-light type = "ambient" color = "#445451"></a-light> 
+            
 
     <!-- 20 secs to load else you aint gonna be included . -->
      <a-assets timeout="20000"></a-assets> 
@@ -31,14 +30,13 @@
             <video id ="overitVid" src="assets/video/overit.mp4" autoplay = true loop = true preload = true></video>
             <video id ="teethaVid" src="assets/video/teetha.mp4" autoplay = true loop = true preload = true></video>
             <video id ="brainfryVid" src="assets/video/brainfry.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="bdaysongVid" src="assets/video/bdaysong.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="milaVid" src="assets/video/mila.mp4" autoplay = true loop = true preload = true></video>
             <video id ="crazyVid" src= "assets/video/crazy.mp4" autoplay = true loop = true preload = true></video>
             <video id ="thefeelsVid" src="assets/video/thefeels.mp4" autoplay = true loop = true preload = true></video>
             <video id ="turkeydayVid" src="assets/video/turkeyday.mp4" autoplay = true loop = true preload = true></video>
             <video id ="weirdnessVid" src="assets/video/weirdness.mp4" autoplay = true loop = true preload = true></video>
             <video id ="bushfireVid" src="assets/video/bushfire.mp4" autoplay = true loop = true preload = true></video>
             <video id ="beirutVid" src="assets/video/beirut.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="bushfireVid" src="assets/video/bushfire.mp4" autoplay = true loop = true preload = true></video>
             <video id ="bijaVid" src="assets/video/bija.mp4" autoplay = true loop = true preload = true></video>
             <video id ="sighVid" src="assets/video/sigh.mp4" autoplay = true loop = true preload = true></video>
             <img id ="churchTexture" src="assets/img/church.jpg"></img>
@@ -84,7 +82,16 @@
             <a-sound src="assets/audio/layeredchant.wav" autoplay="true"position="-3 1 -4"></a-sound>
         </a-assets>
 
-
+<!-- The original example also has this 180 degree rotation, to appear to be going forward. -->
+          <a-videosphere 
+          id="videosphere" 
+          src="#marketVid" 
+          rotation="0 180 0" 
+          play-on-window-click
+          play-on-vrdisplayactivate-or-enter-vr>
+          </a-videosphere>
+      <!-- <a-entity environment= "presets:egypt"></a-entity>      -->
+      <a-light type = "ambient" color = "#445451"></a-light> 
 
 <a-mixin id="image" geometry="primitive: plane; height: 5; width: 5"
 material="shader: flat; side: double" look-at="[camera]"></a-mixin>
@@ -97,11 +104,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
     
         <!-- Specify our scene. -->
         <!-- <a-scene stats> -->
-          <!-- The original example also has this 180 degree rotation, to appear to be going forward. -->
-          <a-videosphere rotation="0 180 0" src="#marketVid" 
-                         play-on-window-click
-                         play-on-vrdisplayactivate-or-enter-vr>
-          </a-videosphere>
+    
           
           <!-- Define camera with zero user height, movement disabled and arrow key rotation added. -->
           <!-- <a-camera user-height="0" wasd-controls-enabled="false" arrow-key-rotation> -->
@@ -214,7 +217,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
           <a-box src="#handsupTexture"></a-box>
           <a-box src="#jazzhandsTexture"></a-box>
           <a-box src="#micTexture"></a-box>
-          <a-box src="#noiseTexture"></a-box>
+          <a-box src ="#noiseTexture" enter-world class="starting"></a-box>
           <a-box src="#omgTexture"></a-box>
           <a-box src="#pfloorTexture"></a-box>
           <a-box src="#piggyTexture"></a-box>
@@ -245,7 +248,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src="#handsupTexture"></a-box>
         <a-box src="#jazzhandsTexture"></a-box>
         <a-box src="#micTexture"></a-box>
-        <a-box src="#noiseTexture"></a-box>
+        <a-box src ="#noiseTexture" enter-world class="starting"></a-box>
         <a-box src="#omgTexture"></a-box>
         <a-box src="#pfloorTexture"></a-box>
         <a-box src="#piggyTexture"></a-box>
@@ -276,7 +279,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src="#handsupTexture"></a-box>
         <a-box src="#jazzhandsTexture"></a-box>
         <a-box src="#micTexture"></a-box>
-        <a-box src="#noiseTexture"></a-box>
+        <a-box src ="#noiseTexture" enter-world class="starting"></a-box>
         <a-box src="#omgTexture"></a-box>
         <a-box src="#pfloorTexture"></a-box>
         <a-box src="#piggyTexture"></a-box>
@@ -307,7 +310,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src="#handsupTexture"></a-box>
         <a-box src="#jazzhandsTexture"></a-box>
         <a-box src="#micTexture"></a-box>
-        <a-box src="#noiseTexture"></a-box>
+        <a-box src ="#noiseTexture" enter-world class="starting"></a-box>
         <a-box src="#omgTexture"></a-box>
         <a-box src="#pfloorTexture"></a-box>
         <a-box src="#piggyTexture"></a-box>
@@ -337,7 +340,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src="#handsupTexture"></a-box>
         <a-box src="#jazzhandsTexture"></a-box>
         <a-box src="#micTexture"></a-box>
-        <a-box src="#noiseTexture"></a-box>
+        <a-box src ="#noiseTexture" enter-world class="starting"></a-box>
         <a-box src="#omgTexture"></a-box>
         <a-box src="#pfloorTexture"></a-box>
         <a-box src="#piggyTexture"></a-box>
@@ -347,7 +350,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src="#sighTexture"></a-box>
         <a-box src="#squishTexture"></a-box>
         <a-box src="#tiredTexture"></a-box>
-        <a-box src="#hitlerTexture"></a-box>
+        <!-- <a-box src="#hitlerTexture"></a-box> -->
       </a-entity>
 
       <!-- DODEC 6 Redlips-->
@@ -367,7 +370,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src="#handsupTexture"></a-box>
         <a-box src="#jazzhandsTexture"></a-box>
         <a-box src="#micTexture"></a-box>
-        <a-box src="#noiseTexture"></a-box>
+        <a-box src ="#noiseTexture" enter-world class="starting"></a-box>
         <a-box src="#omgTexture"></a-box>
         <a-box src="#pfloorTexture"></a-box>
         <a-box src="#piggyTexture"></a-box>
@@ -398,7 +401,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src="#handsupTexture"></a-box>
         <a-box src="#jazzhandsTexture"></a-box>
         <a-box src="#micTexture"></a-box>
-        <a-box src="#noiseTexture"></a-box>
+        <a-box src ="#noiseTexture" enter-world class="starting"></a-box>
         <a-box src="#omgTexture"></a-box>
         <a-box src="#pfloorTexture"></a-box>
         <a-box src="#piggyTexture"></a-box>
@@ -427,7 +430,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src="#handsupTexture"></a-box>
         <a-box src="#jazzhandsTexture"></a-box>
         <a-box src="#micTexture"></a-box>
-        <a-box src="#noiseTexture"></a-box>
+        <a-box src ="#noiseTexture" enter-world class="starting"></a-box>
         <a-box src="#omgTexture"></a-box>
         <a-box src="#pfloorTexture"></a-box>
         <a-box src="#piggyTexture"></a-box>
@@ -458,7 +461,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src="#handsupTexture"></a-box>
         <a-box src="#jazzhandsTexture"></a-box>
         <a-box src="#micTexture"></a-box>
-        <a-box src="#noiseTexture"></a-box>
+        <a-box src ="#noiseTexture" enter-world class="starting"></a-box>
         <a-box src="#omgTexture"></a-box>
         <a-box src="#pfloorTexture"></a-box>
         <a-box src="#piggyTexture"></a-box>
@@ -508,29 +511,34 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       </a-entity>
 
       <a-entity layout="type: dodecahedron; radius: 20">
-        <a-entity mixin="video" material="src: #bushfireVid"></a-entity>
-        <a-entity mixin="video" material="src: #teethaVid"></a-entity>
+         <!-- <a-entity mixin="video" material="src: #bushfireVid" enter-world></a-entity> -->
+        <a-video mixin ="video" src = "#bushfireVid" enter-world></a-video>
+        <!-- <a-entity mixin="video" material="src: #teethaVid"></a-entity> -->
+        <!-- <a-video mixin ="video" src = "#teethaVid" enter-world></a-video>
         <a-entity mixin="video" material="src: #thefeelsVid"></a-entity>
         <a-entity mixin="video" material="src: #coffeeVid"></a-entity>
         <a-entity mixin="video" material="src: #marketVid"></a-entity>
-        <a-entity mixin="video" material="src: #weirdnessVid"></a-entity>
+        <a-entity mixin="video" material="src: #weirdnessVid"></a-entity> -->
 
         <a-entity mixin="video" material="src: #bijaVid"></a-entity>
-        <a-entity mixin="video" material="src: #teethaVid"></a-entity>
+        <!-- <a-entity mixin="video" material="src: #teethaVid"></a-entity> -->
+        <!-- <a-video mixin ="video" src = "#teethaVid" enter-world></a-video>
         <a-entity mixin="video" material="src: #coachVid"></a-entity>
         <a-entity mixin="video" material="src: #turkeydayVid"></a-entity>
         <a-entity mixin="video" material="src: #beirutVid"></a-entity>
-        <a-entity mixin="video" material="src: #brainfryVid"></a-entity>
+        <a-entity mixin="video" material="src: #brainfryVid"></a-entity> -->
 
-        <a-entity mixin="video" material="src: #sighVid"></a-entity>
+        <!-- <a-entity mixin="video" material="src: #sighVid"></a-entity>
         <a-entity mixin="video" material="src: #coachVid"></a-entity>
         <a-entity mixin="video" material="src: #coffeeVid"></a-entity>
         <a-entity mixin="video" material="src: #thefeelsVid"></a-entity>
-        <a-entity mixin="video" material="src: #overitVid"></a-entity>
-        <a-entity mixin="video" material="src: #weirdnessVid"></a-entity>
-
-        <a-entity mixin="video" material="src: #teethaVid"></a-entity>
-        <a-entity mixin="video" material="src: #bdaysongVid"></a-entity>
+        <a-entity mixin="video" material="src: #overitVid"></a-entity> -->
+        <!-- <a-entity mixin="video" material="src: #weirdnessVid"></a-entity> -->
+        <a-img mixin ="img" src = "#piggyTexture" enter-world></a-img>
+<!-- 
+        <a-entity mixin="video" material="src: #teethaVid"></a-entity> -->
+        <a-video mixin ="video" src = "#teethaVid" enter-world></a-video>
+        <a-entity mixin="video" material="src: #milaVid"></a-entity>
       </a-entity>
 
       <a-entity position="0 0 0">
@@ -672,7 +680,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
     </a-scene> 
   </a-scene>    
      <!--githubcorner-->
-  <a href="https://github.com/supermedium/superframe/tree/master/components/layout/examples/dodecahedron/" 
+  <a href="https://github.com/wonderlexicon/anotherNow" 
   class="github-corner">
   <svg width="80" height="80" viewBox="0 0 250 250" style="fill: #111; 
   color: #EFEFEF; position: fixed; bottom: 0; border: 0; left: 0; transform: rotate(180deg); opacity: 0.8">
