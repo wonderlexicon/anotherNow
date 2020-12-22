@@ -18,18 +18,23 @@
             
 
     <!-- 20 secs to load else you aint gonna be included . -->
-     <a-assets timeout="20000"></a-assets> 
-     <a-mixin id="video" geometry="primitive: plane; height: 5; width: 5"
-     material="shader: flat; side: double" look-at="[camera]"></a-mixin>
-     <a-mixin id="image" geometry="primitive: plane; height: 5; width: 5"
-     material="shader: flat; side: double" look-at="[camera]"></a-mixin>
+    <a-assets timeout="60000"></a-assets> 
+            <a-mixin id="video" geometry="primitive: plane; height: 5; width: 5"
+            material="shader: flat; side: double" look-at="[camera]"></a-mixin>
+            <a-mixin id="image" geometry="primitive: plane; height: 5; width: 5"
+            material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             <!-- <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline> <source type="application/x-mpegurl"> <source type="video/mp4" src="assets/video/bdaysong.mp4"></video> -->
             <video id ="marketVid" src="assets/video/market.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="bidenVid" src="assets/video/biden.mov" autoplay = true loop = true preload = true></video>
             <video id ="coachVid" src="assets/video/coach.mp4" autoplay = true loop = true preload = true></video>
             <video id ="coffeeVid" src="assets/video/coffee.mp4" autoplay = true loop = true preload = true></video>
             <video id ="overitVid" src="assets/video/overit.mp4" autoplay = true loop = true preload = true></video>
             <video id ="teethaVid" src="assets/video/teetha.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="quietairportfeetVid" src="assets/video/quietairportfeet.mp4" autoplay = true loop = true preload = true></video>
             <video id ="brainfryVid" src="assets/video/brainfry.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="waterpedVid" src="assets/video/waterpedal.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="silentwavesVid" src="assets/video/silentwaves.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="westsideVid" src="assets/video/westside.mp4" autoplay = true loop = true preload = true></video>
             <video id ="milaVid" src="assets/video/mila.mp4" autoplay = true loop = true preload = true></video>
             <video id ="crazyVid" src= "assets/video/crazy.mp4" autoplay = true loop = true preload = true></video>
             <video id ="thefeelsVid" src="assets/video/thefeels.mp4" autoplay = true loop = true preload = true></video>
@@ -52,6 +57,7 @@
             <img id ="bugeyeTexture" src="assets/img/bugeye.jpg"></img>
             <img id ="churchTexture" src="assets/img/church.jpg"></img>
             <img id ="confusedTexture" src="assets/img/confused.jpg"></img>
+            <img id ="momfaceTexture" src="assets/img/momface.jpg"></img>
             <img id ="couchTexture" src="assets/img/couch.jpg"></img>
             <img id ="crosseyeTexture" src="assets/img/crosseye.jpg"></img>
             <img id ="dubiousTexture" src="assets/img/dubious.jpg"></img>
@@ -65,7 +71,10 @@
             <img id ="hitlerTexture" src="assets/img/hitler.jpg"></img>
             <img id ="jazzhandsTexture" src="assets/img/jazzhands.jpg"></img>
             <img id ="micTexture" src="assets/img/mic.jpg"></img>
-            <img id ="hornet#hornetTexture" src="assets/img/noise.jpg"></img>
+            <img id ="hornetTexture" src="assets/img/killerhornet.jpg"></img>
+            <img id ="atmosphereTexture" src="assets/img/earthatmosphere.jpg"></img>
+            <img id ="earthlightsTexture" src="assets/img/earthlights.png"></img>
+            <img id ="noiseTexture" src="assets/img/noise.jpg"></img>
             <img id ="omgTexture" src="assets/img/omg.jpg"></img>
             <img id ="pfloorTexture" src="assets/img/pfloor.jpg"></img>
             <img id ="piggyTexture" src="assets/img/piggy.jpg"></img>
@@ -79,7 +88,7 @@
             <img id ="umbrellaTexture" src="assets/img/umbrella.jpg"></img>
             <img id ="youngblmTexture" src="assets/img/youngblm.jpg"></img>
             <img id ="unonlineTexture" src="assets/img/unonline.jpg"></img>
-            <img id ="demprimTexture" src="assets/img/demprimary.jpg"></img>
+            <img id ="marketVid" src="assets/img/demprimary.jpg"></img>
             <img id ="marketfreakTexture" src="assets/img/marketfreak.jpg"></img>
             <img id ="trumpthumbTexture" src="assets/img/trumpthumb.jpg"></img>
             <img id ="michantiTexture" src="assets/img/michantihome.jpg"></img>
@@ -91,21 +100,22 @@
             <img id ="timerbgTexture" src="assets/img/timerbg.jpg"></img>
             <img id ="windowTexture" src="assets/img/window.jpg"></img>
             <img id ="hornetTexture" src="assets/img/killerhornet.jpg"></img>
-            <audio id="waterAud" src="assets/audio/watersounds.wav"></audio>
-            <audio id="layerAud" src="assets/audio/layeredchant.wav"></audio> 
-            <audio id="daydreamAud" src="assets/audio/daydream.mp3" autoplay></audio>
-            <audio id="chantmix" src="assets/audio/chantmix2.wav" autoplay"></audio>
-            <audio id="layeredchant" src="assets/audio/layeredchant.wav" autoplay = true loop = true preload = true></audio>
-            <a-asset-item id="zoom-texture" src="assets/img/bugeye.jpg"></a-asset-item>
-            <a-asset-item id="sigh-vid" src="assets/video/sigh.mp4"></a-asset-item>
-            <a-sound src="assets/audio/watersounds.wav" autoplay="true" position="-3 1 -4"></a-sound>
-            <a-sound src="assets/audio/layeredchant.wav" autoplay="true"position="-3 1 -4"></a-sound>
+            <audio id="javasoundsAud" src="assets/audio/javasounds.wav" autoplay ="false" loop ="true" preload ="true"></audio>
         </a-assets>
 
+
+        <!-- <audio id="daydreamAud" src="assets/audio/daydream.mp3" autoplay ="false" loop ="true" preload ="true"></audio>
+        <audio id="chantmix" src="assets/audio/chantmix2.wav" autoplay ="false" loop ="true" preload ="true"></audio>
+        <a-sound src="assets/audio/layeredchant.wav" autoplay="false" position="-3 1 -4"></a-sound>
+        <audio id="layeredchant" src="assets/audio/layeredchant.wav" autoplay ="false" loop ="true" preload ="true"></audio>
+        <a-sound src="assets/audio/watersounds.wav" autoplay="false" position="-3 1 -4"></a-sound> -->
+
+        <!-- <a-asset-item id="zoom-texture" src="assets/img/bugeye.jpg"></a-asset-item>
+        <a-asset-item id="sigh-vid" src="assets/video/sigh.mp4"></a-asset-item> -->
 <!-- The original example also has this 180 degree rotation, to appear to be going forward. -->
           <a-videosphere 
           id="videosphere" 
-          src="#marketVid" 
+          src="#silentwavesVid" 
           rotation="0 180 0" 
           play-on-window-click
           play-on-vrdisplayactivate-or-enter-vr>
@@ -220,7 +230,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         scale-on-mouseenter>
         </a-box> -->
 
-   <!-- DODEC 1 Noise -->
+   <!-- DODEC 1 mila -->
 
         <a-entity layout="type: dodecahedron; radius:  5" position ="0 0 -8">
           <a-box src ="#milaVid" enter-world class="starting"></a-box>
@@ -281,35 +291,35 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
 <!-- DODEC 3 politics-->
 
         <a-entity layout="type: dodecahedron; radius:  5" position ="0 0 12">
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
-        <a-box src ="#demprimTexture" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="starting"></a-box>
+        <a-box src ="#marketfreakTexture" enter-world class="starting"></a-box>
       </a-entity>
 
 
-      <!-- DODEC 4 BORIS CHURCH -->
+      <!-- DODEC 4 sigh -->
 
       <a-entity layout="type: dodecahedron; radius:  5" position ="-16 0 4">
         <a-box src ="#sighVid" enter-world class="starting"></a-box>
@@ -336,10 +346,10 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src ="#sighVid" enter-world class="starting"></a-box>
         <a-box src ="#sighVid" enter-world class="starting"></a-box>
         <a-box src ="#sighVid" enter-world class="starting"></a-box>
-        <a-box src ="#sighVid" enter-world class="starting"></a-box>
+        <a-box src ="#sighTexture" enter-world class="starting"></a-box>
       </a-entity>
 
-       <!-- DODEC 5 Hitler-->
+       <!-- DODEC 5 hornet-->
 
        <a-entity layout="type: dodecahedron; radius:  5" position ="-8 0 8">
         <a-box src ="#hornetTexture" enter-world class="starting"></a-box>
@@ -369,71 +379,69 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src ="#hornetTexture" enter-world class="starting"></a-box>
       </a-entity>
 
-      </a-entity>
 
-      <!-- DODEC 6 Redlips-->
+      <!-- DODEC 6 beirut-->
 
       <a-entity layout="type: dodecahedron; radius:  5" position ="-12 0 0">
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#waterpedVid" enter-world class="starting"></a-box>
         </a-entity>
+   
+
+<!-- DODEC 6 coachvid-->
+
+      <a-entity layout="type: dodecahedron; radius:  5" position="16 0 0">
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#momfaceTexture" enter-world class="starting"></a-box>
       </a-entity>
 
-
-<!-- DODEC 6 handsup-->
-
-      <a-entity layout="type: dodecahedron; radius:  5" position="-8 0 20">
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#bijaVid" enter-world class="starting"></a-box>
-      </a-entity>
-
-<!-- DODEC 7 frown -->
+<!-- DODEC 7 thefeels -->
     <a-entity layout="type: dodecahedron; radius:  5" position ="0 0 8">
       <a-box src ="#thefeelsVid" enter-world class="starting"></a-box>
       <a-box src ="#thefeelsVid" enter-world class="starting"></a-box>
@@ -463,9 +471,9 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       </a-entity>
 
 
-
-        <!-- DODEC 8 bugeye -->
+        <!-- DODEC 8 trumpie -->
       <a-entity layout="type: dodecahedron; radius:  5" position ="8 0 0">
+        <a-box src ="#trumpaquitTexture" enter-world class="starting"></a-box>
         <a-box src ="#trumpie2Vid" enter-world class="starting"></a-box>
         <a-box src ="#trumpie2Vid" enter-world class="starting"></a-box>
         <a-box src ="#trumpie2Vid" enter-world class="starting"></a-box>
@@ -489,13 +497,11 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src ="#trumpie2Vid" enter-world class="starting"></a-box>
         <a-box src ="#trumpie2Vid" enter-world class="starting"></a-box>
         <a-box src ="#trumpie2Vid" enter-world class="starting"></a-box>
-        <a-box src ="#trumpie2Vid" enter-world class="starting"></a-box>
-        <a-box src ="#trumpie2Vid" enter-world class="starting"></a-box>
-      </a-entity>
+        <a-box src ="#trumpthumbTexture" enter-world class="starting"></a-box>
       </a-entity>
 
 
-          <!-- DODEC 9 omg -->
+          <!-- DODEC 9 bushfire -->
         <a-entity layout="type: dodecahedron; radius:  5" position ="-8 0 -4">
         <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
         <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
@@ -525,46 +531,73 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       </a-entity>
 
 
+      <a-entity layout="type: dodecahedron; radius:  5" position ="16 0 4">
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
+        <a-box src ="#brainfryVid" enter-world class="starting"></a-box>
+      </a-entity>
+
 
       <a-entity geometry="primitive: sphere; radius: 1000"
-                material="color: #2994B2; shader: flat" scale="1 1 -1">
+                material="src: #atmosphereTexture; shader: flat" scale="1 1 -1">
       </a-entity>
 
       <a-entity layout="type: dodecahedron; radius: 20">
-         <a-entity mixin="video" material="src: #trumpie1Vid" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #trumpie1Vid" enter-world></a-entity>
-         <a-entity mixin="video" material="src: #trumpie1Vid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #trumpie1Vid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #trumpie1Vid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #quietairportfeetVid" enter-world></a-entity>    
+         <a-entity mixin="video" material="src: #marketVid" enter-world></a-entity>
+         <a-entity mixin="video" material="src: #brainfryVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #sighVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #blmVid" enter-world></a-entity>  
 
          <a-entity mixin="video" material="src: #coffeeVid" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #coffeeVid" enter-world></a-entity>
-         <a-entity mixin="video" material="src: #coffeeVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #coffeeVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #coffeeVid" enter-world></a-entity>
+         <a-entity mixin="video" material="src: #thefeelsVid" enter-world></a-entity>
+         <a-entity mixin="video" material="src: #quietairportfeetVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #bidenVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #quietopenrdVid" enter-world></a-entity>
   
-         <a-entity mixin="video" material="src: #timerbgTexture" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #timerbgTexture" enter-world></a-entity>
-         <a-entity mixin="video" material="src: #timerbgTexture" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #timerbgTexture" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #weirdnessVid" enter-world></a-entity>    
+         <a-entity mixin="video" material="src: #silentwavesVid" enter-world></a-entity>
+         <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #overitVid" enter-world></a-entity>  
          <a-entity mixin="video" material="src: #timerbgTexture" enter-world></a-entity>  
          
-         <a-entity mixin="video" material="src: #blmVid" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #blmVid" enter-world></a-entity>
-         <a-entity mixin="video" material="src: #blmVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #blmVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #blmVid" enter-world></a-entity>  
-
-         <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>
-         <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>  
-
-    
+         <a-entity mixin="video" material="src: #trumpie3Vid" enter-world></a-entity>    
+         <a-entity mixin="video" material="src: #bidenVid" enter-world></a-entity>
          <a-entity mixin="video" material="src: #overitVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #milaVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #thefeelsVid" enter-world></a-entity>  
+<!-- 
+         <a-entity mixin="video" material="src: #quietsnowrdVid" enter-world></a-entity>    
+         <a-entity mixin="video" material="src: #quietsnowrdVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #quietsnowrdVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #quietsnowrdVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #quietsnowrdVid" enter-world></a-entity>   -->
+
          <a-entity mixin="video" material="src: #bijaVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #turkeydayVid" enter-world></a-entity> 
+         <a-entity mixin="video" material="src: #bijaVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #bijaVid" enter-world></a-entity> 
       </a-entity>
 
       <a-entity position="0 0 0">
@@ -709,7 +742,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       </a-camera>
 
   
-    </a-scene> 
+  
   </a-scene>    
      <!--githubcorner-->
   <a href="https://github.com/wonderlexicon/anotherNow" 
