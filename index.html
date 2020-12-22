@@ -18,74 +18,38 @@
             
 
     <!-- 20 secs to load else you aint gonna be included . -->
-    <a-assets timeout="60000"></a-assets> 
+    <a-assets timeout="5000"></a-assets>
             <a-mixin id="video" geometry="primitive: plane; height: 5; width: 5"
             material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             <a-mixin id="image" geometry="primitive: plane; height: 5; width: 5"
             material="shader: flat; side: double" look-at="[camera]"></a-mixin>
-            <!-- <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline> <source type="application/x-mpegurl"> <source type="video/mp4" src="assets/video/bdaysong.mp4"></video> -->
+            <!-- <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline> <source type="application/x-mpegurl"> <source type="video/mp4" src="assets/video/bdaysong.mp4"></video> -->     
+            <!-- politics and world events -->
+            <video id ="beirutVid" src="assets/video/beirut.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="blmVid" src="assets/video/blmnames.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="bushfireVid" src="assets/video/bushfire.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="debateVid" src="assets/video/debate.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="covidgraveVid" src="assets/video/covidgrave.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="hornetVid" src="assets/video/hornetvid.mp4" autoplay = true loop = true preload = true></video>
             <video id ="marketVid" src="assets/video/market.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="bidenVid" src="assets/video/biden.mov" autoplay = true loop = true preload = true></video>
+            <!-- selfiezoom  -->
+            <video id ="bbathVid" src="assets/video/bbath.mp4" autoplay = true loop = true preload = true></video>
             <video id ="coachVid" src="assets/video/coach.mp4" autoplay = true loop = true preload = true></video>
             <video id ="coffeeVid" src="assets/video/coffee.mp4" autoplay = true loop = true preload = true></video>
             <video id ="overitVid" src="assets/video/overit.mp4" autoplay = true loop = true preload = true></video>
             <video id ="teethaVid" src="assets/video/teetha.mp4" autoplay = true loop = true preload = true></video>
+            <!-- locations -->
+            <video id ="javafieldVid" src="assets/video/javafield.mp4" autoplay = true loop = true preload = true></video>
             <video id ="quietairportfeetVid" src="assets/video/quietairportfeet.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="brainfryVid" src="assets/video/brainfry.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="waterpedVid" src="assets/video/waterpedal.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="quietopenrdVid" src="assets/video/quietopenrd.mp4" autoplay = true loop = true preload = true></video>
             <video id ="silentwavesVid" src="assets/video/silentwaves.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="snowrdVid" src="assets/video/snowrd.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="waterpedVid" src="assets/video/waterpedal.mp4" autoplay = true loop = true preload = true></video>
             <video id ="westsideVid" src="assets/video/westside.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="milaVid" src="assets/video/mila.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="crazyVid" src= "assets/video/crazy.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="thefeelsVid" src="assets/video/thefeels.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="turkeydayVid" src="assets/video/turkeyday.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="weirdnessVid" src="assets/video/weirdness.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="bushfireVid" src="assets/video/bushfire.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="beirutVid" src="assets/video/beirut.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="bijaVid" src="assets/video/bija.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="sighVid" src="assets/video/sigh.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="bushfireVid" src="assets/video/bushfire.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="blmVid" src="assets/video/blmnames.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="trumpie1Vid" src="assets/video/trumpie1.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="trumpie2Vid" src="assets/video/trumpie2.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="trumpie3Vid" src="assets/video/trumpie3.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="trumpie4Vid" src="assets/video/trumpie4.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="trumpie5Vid" src="assets/video/trumpie5.mp4" autoplay = true loop = true preload = true></video>
-            <img id ="churchTexture" src="assets/img/church.jpg"></img>
-            <img id ="borischurchTexture" src="assets/img/borischurch.jpg"></img>
-            <img id ="bossyTexture" src="assets/img/bossy.jpg"></img>
-            <img id ="bugeyeTexture" src="assets/img/bugeye.jpg"></img>
-            <img id ="churchTexture" src="assets/img/church.jpg"></img>
-            <img id ="confusedTexture" src="assets/img/confused.jpg"></img>
-            <img id ="momfaceTexture" src="assets/img/momface.jpg"></img>
-            <img id ="couchTexture" src="assets/img/couch.jpg"></img>
-            <img id ="crosseyeTexture" src="assets/img/crosseye.jpg"></img>
-            <img id ="dubiousTexture" src="assets/img/dubious.jpg"></img>
-            <img id ="elbowTexture" src="assets/img/elbow.jpg"></img>
-            <img id ="eyerollTexture" src="assets/img/eyeroll.jpg"></img>
-            <img id ="fingersTexture" src="assets/img/fingers.jpg"></img>
-            <img id ="frownTexture" src="assets/img/frown.jpg"></img>
-            <img id ="handsTexture" src="assets/img/hands.jpg"></img>
-            <img id ="hands2Texture" src="assets/img/hands2.jpg"></img>
-            <img id ="handsupTexture" src="assets/img/handsup.jpg"></img>
-            <img id ="hitlerTexture" src="assets/img/hitler.jpg"></img>
-            <img id ="jazzhandsTexture" src="assets/img/jazzhands.jpg"></img>
-            <img id ="micTexture" src="assets/img/mic.jpg"></img>
             <img id ="hornetTexture" src="assets/img/killerhornet.jpg"></img>
             <img id ="atmosphereTexture" src="assets/img/earthatmosphere.jpg"></img>
             <img id ="earthlightsTexture" src="assets/img/earthlights.png"></img>
             <img id ="noiseTexture" src="assets/img/noise.jpg"></img>
-            <img id ="omgTexture" src="assets/img/omg.jpg"></img>
-            <img id ="pfloorTexture" src="assets/img/pfloor.jpg"></img>
-            <img id ="piggyTexture" src="assets/img/piggy.jpg"></img>
-            <img id ="redlipsTexture" src="assets/img/redlips.jpg"></img>
-            <img id ="risefallTexture" src="assets/img/risefall.jpg"></img>
-            <img id ="scaryTexture" src="assets/img/scary.jpg"></img>
-            <img id ="scratchTexture" src="assets/img/scratch.jpg"></img>
-            <img id ="squishTexture" src="assets/img/squish.jpg"></img>
-            <img id ="sighTexture" src="assets/img/sigh.jpg"></img>
-            <img id ="tiredTexture" src="assets/img/tired.jpg"></img>
-            <img id ="umbrellaTexture" src="assets/img/umbrella.jpg"></img>
             <img id ="youngblmTexture" src="assets/img/youngblm.jpg"></img>
             <img id ="unonlineTexture" src="assets/img/unonline.jpg"></img>
             <img id ="marketVid" src="assets/img/demprimary.jpg"></img>
@@ -98,7 +62,6 @@
             <img id ="bidenbernieTexture" src="assets/img/bidenbernie.jpg"></img>
             <img id ="trumpaquitTexture" src="assets/img/trumpaquit.jpg"></img>
             <img id ="timerbgTexture" src="assets/img/timerbg.jpg"></img>
-            <img id ="windowTexture" src="assets/img/window.jpg"></img>
             <img id ="hornetTexture" src="assets/img/killerhornet.jpg"></img>
             <audio id="javasoundsAud" src="assets/audio/javasounds.wav" autoplay ="false" loop ="true" preload ="true"></audio>
         </a-assets>
@@ -115,7 +78,7 @@
 <!-- The original example also has this 180 degree rotation, to appear to be going forward. -->
           <a-videosphere 
           id="videosphere" 
-          src="#silentwavesVid" 
+          src="#quietopenrdVid" 
           rotation="0 180 0" 
           play-on-window-click
           play-on-vrdisplayactivate-or-enter-vr>
@@ -556,7 +519,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
         <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
         <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
-        <a-box src ="#brainfryVid" enter-world class="starting"></a-box>
+        <a-box src ="#snowrdVid" enter-world class="starting"></a-box>
       </a-entity>
 
 
@@ -567,7 +530,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       <a-entity layout="type: dodecahedron; radius: 20">
          <a-entity mixin="video" material="src: #quietairportfeetVid" enter-world></a-entity>    
          <a-entity mixin="video" material="src: #marketVid" enter-world></a-entity>
-         <a-entity mixin="video" material="src: #brainfryVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #snowrdVid" enter-world></a-entity>  
          <a-entity mixin="video" material="src: #sighVid" enter-world></a-entity>  
          <a-entity mixin="video" material="src: #blmVid" enter-world></a-entity>  
 
@@ -583,17 +546,17 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
          <a-entity mixin="video" material="src: #overitVid" enter-world></a-entity>  
          <a-entity mixin="video" material="src: #timerbgTexture" enter-world></a-entity>  
          
-         <a-entity mixin="video" material="src: #trumpie3Vid" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #bidenVid" enter-world></a-entity>
-         <a-entity mixin="video" material="src: #overitVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #milaVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #thefeelsVid" enter-world></a-entity>  
-<!-- 
-         <a-entity mixin="video" material="src: #quietsnowrdVid" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #quietsnowrdVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #quietsnowrdVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #quietsnowrdVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #quietsnowrdVid" enter-world></a-entity>   -->
+         <a-entity mixin="video" material="src: #hornetVid" enter-world></a-entity>    
+         <a-entity mixin="video" material="src: #hornetVid" enter-world></a-entity>
+         <a-entity mixin="video" material="src: #hornetVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #hornetVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #hornetVid" enter-world></a-entity>  
+
+         <a-entity mixin="video" material="src: #snowrdVid" enter-world></a-entity>    
+         <a-entity mixin="video" material="src: #snowrdVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #snowrdVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #snowrdVid" enter-world></a-entity>  
+         <a-entity mixin="video" material="src: #snowrdVid" enter-world></a-entity>  
 
          <a-entity mixin="video" material="src: #bijaVid" enter-world></a-entity>  
          <a-entity mixin="video" material="src: #bijaVid" enter-world></a-entity>  
