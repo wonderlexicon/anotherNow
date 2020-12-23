@@ -112,81 +112,89 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             </a-entity> -->
 
                   <!--LANDMARK BLUE --> 
-       <a-sphere color="blue" position="2 5 0" rotation="0 45 45" scale="1 1 1"></a-sphere>
+       <a-sphere color="blue" position="2 5 0" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
 
         <!--LANDMARK RED -->
-      <a-box color="red" position="-2 5 0" rotation="0 45 45" scale="1 1 1"></a-box>
+      <a-box color="red" position="-2 5 0" rotation="0 45 45" scale="1 1 1"class="starting"></a-box>
 
         <!--LANDMARK YELLOW SPHERE-->
-       <a-sphere color="yellow" position="4 5 -8" rotation="0 45 45" scale="1 1 1"></a-sphere>
+       <a-sphere color="yellow" position="4 5 -8" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
 
         <!--LANDMARK ORANGE -->
-      <a-box color="orange" position="-4 5 8" rotation="0 45 45" scale="1 1 1"></a-box>
+      <a-box color="orange" position="-4 5 8" rotation="0 45 45" scale="1 1 1" class="starting"></a-box>
 
         <!--LANDMARK BLUE --> 
-      <a-box color="blue" position="6 5 -6" rotation="0 45 45" scale="1 1 1"></a-box>
+      <a-box color="blue" position="6 5 -6" rotation="0 45 45" scale="1 1 1" class="starting" ></a-box>
 
         <!--LANDMARK PINK -->
-      <a-sphere color="pink" position="-6 5 6" rotation="0 45 45" scale="1 1 1"></a-sphere>
+      <a-sphere color="pink" position="-6 5 6" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
 
         <!--LANDMARK GREEN -->
-       <a-sphere color="green" position="8 5 -4" rotation="0 -45 45" scale="1 1 1"></a-sphere>
+       <a-sphere color="green" position="8 5 -4" rotation="0 -45 45" scale="1 1 1" class="starting"></a-sphere>
 
         <!--LANDMARK PURPLE -->
-       <a-sphere color="purple" position="-8 5 4" rotation="0 45 45" scale="1 1 1"></a-sphere>
+       <a-sphere color="purple" position="-8 5 4" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
 
         <!--LANDMARK YELLOW CUBE-->
-      <a-box color="yellow" position="6 5 -2" rotation="0 45 45" scale="1 1 1"></a-box>
+      <a-box color="yellow" position="6 5 -2" rotation="0 45 45" scale="1 1 1" class="starting"></a-box>
 
       <!--LANDMARK ORANGE -->
-       <a-sphere color="orange" position="-6 5 2" rotation="0 45 45" scale="1 1 1"></a-sphere>
+       <a-sphere color="orange" position="-6 5 2" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
 
 
       <!--LANDMARK PINK -->
-       <a-box color="pink" position="-6 5 -2" rotation="0 45 45" scale="1 1 1"></a-box>
+       <a-box color="pink" position="-6 5 -2" rotation="0 45 45" scale="1 1 1" class="starting"></a-box>
 
         <!--LANDMARK GREEN -->
-        <a-box color="green" position="8 5 0" rotation="0 -45 45" scale="1 1 1"></a-box>
+        <a-box color="green" position="8 5 0" rotation="0 -45 45" scale="1 1 1" class="starting"></a-box>
 
              <!--LANDMARK RED -->
-      <a-sphere color="red" position="0 5 8" rotation="0 45 45" scale="1 1 1"></a-sphere>
+      <a-sphere color="red" position="0 5 8" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
 
        <!--LANDMARK PURPLE -->
-       <a-box color="purple" position="0 5 10" rotation="0 45 45" scale="1 1 1"></a-box>
+       <a-box color="purple" position="0 5 10" rotation="0 45 45" scale="1 1 1" class="starting"></a-box>
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "0 50 -8" scale="3 3 3"
        light="type: point; intensity: .1">
        </a-entity> 
+
+
        <a-entity id="sphere" geometry="primitive: sphere"
-       material="color: #EFEFEF; shader: flat"
-       position = "0 -50 -8" scale="3 3 3"
-       light="type: point; intensity: .1">
+       position = "0 -50 -8" scale="30 30 30"
+       material="src:#atmosphereTexture;"
+       light="type: point; intensity: 1"
+       class="starting">
        </a-entity> 
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "50 0 -8" scale="3 3 3"
-       light="type: point; intensity: .1">
+       light="type: point; intensity: .1"
+       class="starting">
        </a-entity> 
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "-50 0 -8" scale="3 3 3"
-       light="type: point; intensity: .1">
+       light="type: point; intensity: .1"
+       class="starting">
        </a-entity>
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "50 5 -20"
-       light="type: point; intensity: .1">
+       light="type: point; intensity: .1"
+       class="starting">
        </a-entity> 
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "15 5 10"
-       light="type: point; intensity: .1">
+       light="type: point; intensity: .1"
+       class="starting">
        </a-entity>
        <a-entity id="sphere" geometry="primitive: sphere"
        material="color: #EFEFEF; shader: flat"
        position = "-15 5 10"
-       light="type: point; intensity: .1">
+       light="type: point; intensity: .1"
+       class="starting">
       </a-entity>
 
 
@@ -195,9 +203,9 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         scale-on-mouseenter>
         </a-box> -->
 
-   <!-- DODEC 1 mila -->
+   <!-- DODEC 1 javafield -->
 
-        <a-entity layout="type: dodecahedron; radius:  5" position ="0 0 -8">
+        <a-entity layout="type: dodecahedron; radius:  20" position ="0 0 -8">
           <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
           <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
           <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
@@ -526,55 +534,55 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       </a-entity>
 
 
-      <a-entity geometry="primitive: sphere; radius: 1000"
-                material="src: #atmosphereTexture; shader: flat" scale="1 1 -1">
+      <a-entity geometry="primitive: sphere; radius: 100000"
+                src= "#atmosphereTexture;" position="1 1 -1">
       </a-entity>
 
       <a-entity layout="type: dodecahedron; radius: 20">
-         <a-entity mixin="video" material="src: #coffeeVid" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #coffeeVid" enter-world></a-entity>
-         <a-entity mixin="video" material="src: #coffeeVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #coachVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #coachVid" enter-world></a-entity>  
+         <a-video mixin="video" src= "#coffeeVid" enter-world class="starting"></a-video>    
+         <a-video mixin="video" src= "#coffeeVid" enter-world class="starting"></a-video>
+         <a-video mixin="video" src= "#coffeeVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#coachVid" enter-world class="starting" ></a-video>  
+         <a-video mixin="video" src= "#coachVid" enter-world class="starting" ></a-video>  
 
-         <a-entity mixin="video" material="src: #overitVid" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #crazyVid" enter-world></a-entity>
-         <a-entity mixin="video" material="src: #sighVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #debateVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #debateVid" enter-world></a-entity>
+         <a-video mixin="video" src= "#overitVid" enter-world class="starting"></a-video>    
+         <a-video mixin="video" src= "#crazyVid" enter-world class="starting"></a-video>
+         <a-video mixin="video" src= "#sighVid" enter-world class="starting"></a-video>  
+
+         <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#debateVid" enter-world class="starting"></a-video>
   
-         <a-entity mixin="video" material="src: #thebijVid" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #thebijVid" enter-world></a-entity>
-         <a-entity mixin="video" material="src: #overitVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #bbathVid" enter-world></a-entity>  
+         <a-video mixin="video" src= "#thebijVid" enter-world class="starting"></a-video>    
+         <a-video mixin="video" src= "#thebijVid" enter-world class="starting"></a-video>
+         <a-video mixin="video" src= "#overitVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#teethaVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#bbathVid" enter-world class="starting"></a-video>  
          
-         <a-entity mixin="video" material="src: #debateVid" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #debateVid" enter-world></a-entity>
-         <a-entity mixin="video" material="src: #beirutVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #snowrdVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #snowrdVid" enter-world></a-entity>  
+         <!-- <a-video mixin="video" src= ": #debateVid" enter-world class="starting"></a-video>    
+         <a-video mixin="video" src= ": #debateVid" enter-world class="starting"></a-video> -->
+         <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>
+         <a-video mixin="video" src= "#beirutVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#snowrdVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#snowrdVid" enter-world class="starting"></a-video>  
 
-         <a-entity mixin="video" material="src: #marketVid" enter-world></a-entity>    
-         <a-entity mixin="video" material="src: #marketVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #covidgraveVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #debateVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #debateVid" enter-world></a-entity>  
+         <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>    
+         <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#covidgraveVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>
+         
+         <!-- <a-video mixin="video" src= ": #debateVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= ": #debateVid" enter-world class="starting"></a-video>   -->
 
-         <a-entity mixin="video" material="src: #sighVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #javafieldVid" enter-world></a-entity>  
-         <a-entity mixin="video" material="src: #westsideVid" enter-world></a-entity> 
+         <a-video mixin="video" src= "#sighVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#javafieldVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#westsideVid" enter-world class="starting"></a-video> 
       </a-entity>
 
       <a-entity position="0 0 0">
         <a-entity camera look-controls></a-entity>
        </a-entity>
-<!-- 
-       <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>    
-       <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>
-       <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>  
-       <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>  
-       <a-entity mixin="video" material="src: #teethaVid" enter-world></a-entity>   -->
 
 
         <!-- SIGH BOX -->
@@ -704,7 +712,12 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
 
 
       <a-camera>
-        <a-cursor></a-cursor>
+        <a-cursor 
+        material ="color:red; shader: flat" 
+        geometry="primitive:ring; radiusInner: .01; radiusOuter: .05"
+
+        >
+        </a-cursor>
       </a-camera>
 
   

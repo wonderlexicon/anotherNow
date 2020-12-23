@@ -149,10 +149,10 @@ AFRAME.registerComponent('enter-world', {
     this.el.addEventListener('click', function () {
       var videosphere = document.getElementById("videosphere");
       videosphere.setAttribute("src", el.getAttribute("src"));
-     var startingElements= document.getElementsByClassName("starting");
-    //  startingElements.forEach(element => {
-    //    element.setAttribute("visible",false);
-    //  });
+     var startingElements= document.querySelectorAll(".starting");
+     startingElements.forEach(element => {
+       element.setAttribute("visible",false);
+     });
     });
   }
 });
