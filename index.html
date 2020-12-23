@@ -23,6 +23,8 @@
             material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             <a-mixin id="image" geometry="primitive: plane; height: 5; width: 5"
             material="shader: flat; side: double" look-at="[camera]"></a-mixin>
+            <a-mixin id="box" geometry="primitive: box; height: 5; width: 5"
+            material="shader: flat; look-at="[camera]"></a-mixin>   
             <!-- <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline> <source type="application/x-mpegurl"> <source type="video/mp4" src="assets/video/bdaysong.mp4"></video> -->     
             <!-- politics and world events -->
             <video id ="beirutVid" src="assets/video/beirut.mp4" autoplay = true loop = true preload = true></video>
@@ -205,8 +207,8 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
 
    <!-- DODEC 1 javafield -->
 
-        <a-entity layout="type: dodecahedron; radius:  20" position ="0 0 -8">
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
+        <a-entity layout="type: dodecahedron; radius:  5" position ="0 0 -8">
+          <a-box mixin="video" src= "#javafieldVid" enter-world class="starting"></a-box>  
           <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
           <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
           <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
@@ -264,7 +266,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
 <!-- DODEC 3 politics-->
 
       
-        <a-entity layout="type: dodecahedron; radius:  5" position ="-16 0 4">
+        <a-entity layout="type: dodecahedron; radius:  8" position ="-20 0 4">
         <a-box src ="#marketVid" enter-world class="starting"></a-box>
         <a-box src ="#marketVid" enter-world class="starting"></a-box>
         <a-box src ="#marketVid" enter-world class="starting"></a-box>
@@ -505,7 +507,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       </a-entity>
 
 
-      <a-entity layout="type: dodecahedron; radius:  5" position ="16 0 4">
+      <a-entity layout="type: dodecahedron; radius:  8" position ="20 0 4">
         <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
         <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
         <a-box src ="#quietopenrdVid" enter-world class="starting"></a-box>
@@ -538,7 +540,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
                 src= "#atmosphereTexture;" position="1 1 -1">
       </a-entity>
 
-      <a-entity layout="type: dodecahedron; radius: 20">
+      <a-entity layout="type: dodecahedron; radius: 30">
          <a-video mixin="video" src= "#coffeeVid" enter-world class="starting"></a-video>    
          <a-video mixin="video" src= "#coffeeVid" enter-world class="starting"></a-video>
          <a-video mixin="video" src= "#coffeeVid" enter-world class="starting"></a-video>  
@@ -558,8 +560,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
          <a-video mixin="video" src= "#teethaVid" enter-world class="starting"></a-video>  
          <a-video mixin="video" src= "#bbathVid" enter-world class="starting"></a-video>  
          
-         <!-- <a-video mixin="video" src= ": #debateVid" enter-world class="starting"></a-video>    
-         <a-video mixin="video" src= ": #debateVid" enter-world class="starting"></a-video> -->
+ 
          <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
          <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>
          <a-video mixin="video" src= "#beirutVid" enter-world class="starting"></a-video>  
@@ -579,6 +580,48 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
          <a-video mixin="video" src= "#javafieldVid" enter-world class="starting"></a-video>  
          <a-video mixin="video" src= "#westsideVid" enter-world class="starting"></a-video> 
       </a-entity>
+
+
+      <a-entity layout="type: dodecahedron; radius: 45" scale="1.5" position ="0 3 4">
+        <a-video mixin="video" src= "#coffeeVid" enter-world class="starting"></a-video>    
+        <a-video mixin="video" src= "#coffeeVid" enter-world class="starting"></a-video>
+        <a-video mixin="video" src= "#coffeeVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#coachVid" enter-world class="starting" ></a-video>  
+        <a-video mixin="video" src= "#coachVid" enter-world class="starting" ></a-video>  
+
+        <a-video mixin="video" src= "#overitVid" enter-world class="starting"></a-video>    
+        <a-video mixin="video" src= "#crazyVid" enter-world class="starting"></a-video>
+        <a-video mixin="video" src= "#sighVid" enter-world class="starting"></a-video>  
+
+        <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#debateVid" enter-world class="starting"></a-video>
+ 
+        <a-video mixin="video" src= "#thebijVid" enter-world class="starting"></a-video>    
+        <a-video mixin="video" src= "#thebijVid" enter-world class="starting"></a-video>
+        <a-video mixin="video" src= "#overitVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#teethaVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#bbathVid" enter-world class="starting"></a-video>  
+        
+
+        <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>
+        <a-video mixin="video" src= "#beirutVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#snowrdVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#snowrdVid" enter-world class="starting"></a-video>  
+
+        <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>    
+        <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#covidgraveVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>
+        
+        <!-- <a-video mixin="video" src= ": #debateVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= ": #debateVid" enter-world class="starting"></a-video>   -->
+
+        <a-video mixin="video" src= "#sighVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#javafieldVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#westsideVid" enter-world class="starting"></a-video> 
+     </a-entity>
 
       <a-entity position="0 0 0">
         <a-entity camera look-controls></a-entity>
