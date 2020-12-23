@@ -55,6 +55,8 @@
             <img id ="hornetTexture" src="assets/img/killerhornet.jpg"></img>
             <img id ="atmosphereTexture" src="assets/img/earthatmosphere.jpg"></img>
             <img id ="earthlightsTexture" src="assets/img/earthlights.png"></img>
+            <img id ="earthcloudsTexture" src="assets/img/earthclouds.png"></img>
+            <img id ="earthspecTexture" src="assets/img/earthspec.jpg"></img>
             <img id ="youngblmTexture" src="assets/img/youngblm.jpg"></img>
             <img id ="unonlineTexture" src="assets/img/unonline.jpg"></img>
             <img id ="marketVid" src="assets/img/demprimary.jpg"></img>
@@ -67,6 +69,9 @@
             <img id ="bidenbernieTexture" src="assets/img/bidenbernie.jpg"></img>
             <img id ="trumpaquitTexture" src="assets/img/trumpaquit.jpg"></img>
             <img id ="timerbgTexture" src="assets/img/timerbg.jpg"></img>
+            <img id ="flatblueskyTexture" src="assets/img/f.jpg"></img>
+            <img id ="pinkcloudsTexture" src="assets/img/pinkcloudsrect.png"></img>
+            <img id ="skyvortexTexture" src="assets/img/skyvortex.png"></img
             <audio id="javasoundsAud" src="assets/audio/javasounds.wav" autoplay ="false" loop ="true" preload ="true"></audio>
         </a-assets>
 
@@ -112,53 +117,50 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
                     color:red;
                     value:Click window to make the video play, if needed.">
             </a-entity> -->
-
-                  <!--LANDMARK BLUE --> 
-       <a-sphere color="blue" position="2 5 0" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
-
-        <!--LANDMARK RED -->
-      <a-box color="red" position="-2 5 0" rotation="0 45 45" scale="1 1 1"class="starting"></a-box>
-
-        <!--LANDMARK YELLOW SPHERE-->
-       <a-sphere color="yellow" position="4 5 -8" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
-
-        <!--LANDMARK ORANGE -->
-      <a-box color="orange" position="-4 5 8" rotation="0 45 45" scale="1 1 1" class="starting"></a-box>
-
-        <!--LANDMARK BLUE --> 
-      <a-box color="blue" position="6 5 -6" rotation="0 45 45" scale="1 1 1" class="starting" ></a-box>
-
-        <!--LANDMARK PINK -->
-      <a-sphere color="pink" position="-6 5 6" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
-
-        <!--LANDMARK GREEN -->
-       <a-sphere color="green" position="8 5 -4" rotation="0 -45 45" scale="1 1 1" class="starting"></a-sphere>
-
-        <!--LANDMARK PURPLE -->
-       <a-sphere color="purple" position="-8 5 4" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
-
-        <!--LANDMARK YELLOW CUBE-->
-      <a-box color="yellow" position="6 5 -2" rotation="0 45 45" scale="1 1 1" class="starting"></a-box>
-
-      <!--LANDMARK ORANGE -->
-       <a-sphere color="orange" position="-6 5 2" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
+<!-- 
+              
+       <a-sphere material="src:#earthlightsTexture;"  position="2 5 0" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere>
 
 
-      <!--LANDMARK PINK -->
-       <a-box color="pink" position="-6 5 -2" rotation="0 45 45" scale="1 1 1" class="starting"></a-box>
+      <a-box material="src:#flatblueskyTexture; position="-2 5 0" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-box>
 
-        <!--LANDMARK GREEN -->
-        <a-box color="green" position="8 5 0" rotation="0 -45 45" scale="1 1 1" class="starting"></a-box>
+  
+       <a-sphere material="src:#earthlightsTexture;"  position="4 5 -8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere>
 
-             <!--LANDMARK RED -->
-      <a-sphere color="red" position="0 5 8" rotation="0 45 45" scale="1 1 1" class="starting"></a-sphere>
+      
+      <a-box material="src:#pinkcloudsTexture; position="-4 5 8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5"  class="starting"></a-box>
+
+
+      <a-box material="src:#pinkcloudsTexture; position="6 5 -6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting" ></a-box>
+
+      <a-sphere material="src:#flatblueskyTexture; position="-6 5 6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere>
+
+  
+       <a-sphere material="src:#earthlightsTexture;"  position="8 5 -4" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere>
+
+  
+       <a-sphere material="src:#skyvortexTexture;"  position="-8 5 4" rotation="0 45 45" scale="1 1 1"light="type: point; intensity: .5" class="starting"></a-sphere>
+
+      <a-box material="src:#pinkcloudsTexture; position="6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-box>
+
+    
+       <a-sphere material="src:#earthlightsTexture;" position="-6 5 2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere>
+
+
+      
+       <a-box material="src:#pinkcloudsTexture;position="-6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-box>
+
+        <a-box material="src:#flatblueskyTexture;position="8 5 0" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-box> -->
+
+             <!-- LANDMARK RED
+      <a-sphere material="src:#earthlightsTexture;" position="0 5 8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere> -->
 
        <!--LANDMARK PURPLE -->
-       <a-box color="purple" position="0 5 10" rotation="0 45 45" scale="1 1 1" class="starting"></a-box>
+       <!-- <a-box material="src:#flatblueskyTexture;" position="0 5 10" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-box> -->
 
        <!-- TOP GLOBE -->
        <a-entity id="sphere" geometry="primitive: sphere"
-       scale= "20 20 20" position = "0 50 -8" material="src:#atmosphereTexture;"
+       scale= "20 20 20" position = "0 50 -8" material="src:#earthlightsTexture;"
        light="type: point; intensity: 2" class="starting">
       </a-entity> 
 
@@ -171,7 +173,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
        <!-- RIGHT GLOBE -->
        <a-entity id="sphere" geometry="primitive: sphere"  
        scale= "20 20 20" material="src:#atmosphereTexture;"
-       position = "50 0 -8" light="type: point; intensity: 2">
+       position = "50 0 -20" light="type: point; intensity: 2">
       </a-entity>
  
       <!-- LEFT GLOBE -->
@@ -180,13 +182,13 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
        material="src:#atmosphereTexture;"
        light="type: point; intensity: 2"
        class="starting"></a-entity>
-
-
+<!-- 
+RIGHT2
        <a-entity id="sphere" geometry="primitive: sphere" 
-       position = "50 5 -20" scale="20 20 20" material="src:#atmosphereTexture;"
+       position = "50 5 -8" scale="10 10 10" material="src:#atmosphereTexture;"
         light="type: point; intensity: 1" class="starting">
-       </a-entity> 
-
+       </a-entity>  -->
+<!-- 
        <a-entity id="sphere" geometry="primitive: sphere" 
        position = "15 5 10" scale="5 5 5" material="src:#atmosphereTexture;"
        light="type: point; intensity: 1"
@@ -196,7 +198,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
        <a-entity id="sphere" geometry="primitive: sphere"
        position = "-15 5 10" scale="5 5 5"
        material="src:#atmosphereTexture;" light="type: point; intensity: 1"
-       class="starting"></a-entity>
+       class="starting"></a-entity> -->
 
         <!-- <a-box src="#bdaysongVid" position="28 18 -3" rotation="0 -45 45" scale="6 6 6"
         animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
