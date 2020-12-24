@@ -23,8 +23,8 @@
             material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             <a-mixin id="image" geometry="primitive: plane; height: 5; width: 5"
             material="shader: flat; side: double" look-at="[camera]"></a-mixin>
-            <a-mixin id="box" geometry="primitive: box; height: 8; width: 8"
-            material="shader: flat; look-at="[camera]"></a-mixin>   
+            <a-mixin id="viewBox" geometry="primitive: box; height: 8; width: 8"
+            material="shader: flat; side: all" look-at="[camera]"></a-mixin>   
             <!-- <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline> <source type="application/x-mpegurl"> <source type="video/mp4" src="assets/video/bdaysong.mp4"></video> -->     
             <!-- politics and world events -->
             <video id ="beirutVid" src="assets/video/beirut.mp4" autoplay = true loop = true preload = true></video>
@@ -69,10 +69,10 @@
             <img id ="bidenbernieTexture" src="assets/img/bidenbernie.jpg"></img>
             <img id ="trumpaquitTexture" src="assets/img/trumpaquit.jpg"></img>
             <img id ="timerbgTexture" src="assets/img/timerbg.jpg"></img>
-            <img id ="flatblueskyTexture" src="assets/img/flatblueskyrect.png"></img>
+            <img id ="virtualcommenceTexture" src="assets/img/virtualcommence.jpg"></img>
             <img id ="cloudlineTexture" src="assets/img/cloudline.png"></img>
             <img id ="heavyskyTexture" src="assets/img/heavysky.png"></img>
-            <img id ="skyvortexTexture" src="assets/img/skyvortex.png"></img
+            <img id ="wuhancovidexture" src="assets/img/wuhancovid.jpg"></img
             <audio id="javasoundsAud" src="assets/audio/javasounds.wav" autoplay ="false" loop ="true" preload ="true"></audio>
         </a-assets>
 
@@ -118,39 +118,41 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
                     color:red;
                     value:Click window to make the video play, if needed.">
             </a-entity> -->
- 
-              
-       <a-sphere material="src:#earthlightsTexture;"  position="2 5 0" rotation="0 45 45" scale="2 2 2" light="type: point; intensity: .5" class="starting"></a-sphere>
+<!--  
+              TOPCENTER earthlights -->
+    <a-sphere material="src:#earthlightsTexture;"  position="0 10 0" rotation="0 45 45" scale="5 5 5"  class="starting"></a-sphere>
 
-      <a-sphere material="src:#earthlightsTexture;" position="-2 5 0" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;" position="-2 5 0" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
 
   
-       <a-sphere material="src:#earthlightsTexture;"  position="4 5 -8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;"  position="4 5 -8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
 
       
-      <a-sphere material="src:#earthlightsTexture;" position="-4 5 8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5"  class="starting"></a-sphere>
+  
+  <a-sphere material="src:#earthlightsTexture;" position="-4 5 8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1"  class="starting"></a-sphere>
 
+<!-- 
+LEAVE THIS LIGHT ON! -->
+    <a-sphere material="src:#earthlightsTexture;" position="6 5 -6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting" ></a-sphere>
 
-      <a-sphere material="src:#earthlightsTexture;" position="6 5 -6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting" ></a-sphere>
-
-      <a-sphere material="src:#earthlightsTexture;" position="-6 5 6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;" position="-6 5 6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
 
   
-       <a-sphere material="src:#earthlightsTexture;"  position="8 5 -4" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;"  position="8 5 -4" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
 
   
-       <a-sphere material="src:#earthlightsTexture;"  position="-8 5 4" rotation="0 45 45" scale="1 1 1"light="type: point; intensity: .5" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;"  position="-8 5 4" rotation="0 45 45" scale="1 1 1"light="type: point; intensity: .1" class="starting"></a-sphere>
 
-      <a-sphere material="src:#earthlightsTexture;"  position="6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;"  position="6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
 
     
-       <a-sphere material="src:#earthlightsTexture;" position="-6 5 2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;" position="-6 5 2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
 
 
       
-     <a-sphere material="src:#earthlightsTexture;" position="-6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere> -->
+    <a-sphere material="src:#earthlightsTexture;" position="-6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere> -->
 
-        <a-sphere material="src:#earthlightsTexture;" position="8 5 0" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere> -->
+    <a-sphere material="src:#earthlightsTexture;" position="8 5 0" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere> -->
 
              <!-- LANDMARK RED
       <a-sphere material="src:#earthlightsTexture;" position="0 5 8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere> -->
@@ -158,48 +160,49 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
     
      <!-- <a-sphere material="src:#flatblueskyTexture;" position="0 5 10" rotation="0 45 45" scale="10 10 10" light="type: point; intensity: .5" class="starting"></a-sphere> -->
 
-       <!-- TOP GLOBE -->
-       <a-entity id="sphere" geometry="primitive: sphere"
-       scale= "20 20 20 " position = "0 50 -8" material="src:#atmosphereTexture;"
-       light="type: point; intensity: 2" class="starting">
+        <!-- TOP GLOBE -->
+      <a-entity id="sphere" geometry="primitive: sphere"
+      scale= "20 20 20 " position = "0 50 -8" 
+      light="type: point; intensity: .7"
+      material="src:#atmosphereTexture;"class="starting">
       </a-entity> 
 
-      <!-- BOTTOM GLOBE -->
+        <!-- BOTTOM GLOBE -->
        <a-entity id="sphere" geometry="primitive: sphere"
        position = "0 -50 -8" scale="20 20 20"
-       material="src:#atmosphereTexture;" light="type: point; intensity: 1">
+       light="type: point; intensity: 1"
+       material="src:#atmosphereTexture;">
        </a-entity> 
 
-       <!-- RIGHT GLOBE -->
-       <a-entity id="sphere" geometry="primitive: sphere"   
-      position = "50 0 -20"
-       scale="20 20 20"
-       material="src:#atmosphereTexture;" 
-      light="type: point; intensity: 1">
+        <!-- RIGHT GLOBE -->
+      <a-entity id="sphere" geometry="primitive: sphere"   
+      position = "50 0 -20" scale="20 20 20"
+      material="src:#atmosphereTexture;" class ="startong">
       </a-entity>
  
-      <!-- LEFT GLOBE -->
-       <a-entity id="sphere" geometry="primitive: sphere" 
-       position = "-50 0 -8" scale="20 20 20"
-       material="src:#atmosphereTexture;"
-       light="type: point; intensity: 1"
-       class="starting"></a-entity>
+         <!-- LEFT GLOBE -->
+      <a-entity id="sphere" geometry="primitive: sphere" 
+      position = "-50 0 -8" scale="20 20 20"
+      material="src:#atmosphereTexture;"class="starting">
+      </a-entity>
 
-<!-- CENTER GLOBE -->
-       <a-entity id="sphere" geometry="primitive: sphere" 
-       position = "0 0 0" scale="3 3 3" material="src:#atmosphereTexture;"
-        light="type: point; intensity: .5" class="starting">
-       </a-entity> 
+      <!-- CENTER GLOBE -->
+      <a-entity id="sphere" geometry="primitive: sphere" 
+      position = "0 -5 0" scale="5 5 5"
+      material="src:#atmosphereTexture;"class="starting">
+      </a-entity> 
+
+      
 <!-- 
        <a-entity id="sphere" geometry="primitive: sphere" 
        position = "15 5 10" scale="5 5 5" material="src:#atmosphereTexture;"
-       light="type: point; intensity: 1"
+       light="type: point; intensity: .3"
        class="starting">
        </a-entity>
 
        <a-entity id="sphere" geometry="primitive: sphere"
        position = "-15 5 10" scale="5 5 5"
-       material="src:#atmosphereTexture;" light="type: point; intensity: 1"
+       material="src:#atmosphereTexture;" light="type: point; intensity: .5"
        class="starting"></a-entity> -->
 
         <!-- <a-box src="#bdaysongVid" position="28 18 -3" rotation="0 -45 45" scale="6 6 6"
@@ -207,34 +210,34 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         scale-on-mouseenter>
         </a-box> -->
 
-   <!-- DODEC 1 javafield -->
+   <!-- DODEC 1 blmVid ENTRYSPOT-->
 
         <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="0 0 -8 scale: 5">
-          <a-box mixin="video" src= "#javafieldVid" enter-world class="starting"></a-box>  
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-          <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
+          <a-box mixin="video" src= "#blmVid" enter-world class="starting"></a-box>  
+          <a-box src ="#timerbgTexture" enter-world class="starting"></a-box>
+          <a-box src ="#timerbgTexture" enter-world class="starting"></a-box>
+          <a-box src ="#timerbgTexture" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+          <a-box src ="#trumpaquitTexture" enter-world class="starting"></a-box>
+          <a-box src ="#trumpaquitTexture" enter-world class="starting"></a-box>
+          <a-box src ="#trumpaquitTexture" enter-world class="starting"></a-box>
+          <a-box src ="#pelosiripTexture" enter-world class="starting"></a-box>
+          <a-box src ="#bbathVid" enter-world class="starting"></a-box>
+          <a-box src ="#pelosiripTexture" enter-world class="starting"></a-box>
+          <a-box src ="#coachVid" enter-world class="starting"></a-box>
+          <a-box src ="#coachVid" enter-world class="starting"></a-box>
+          <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
+          <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
+          <a-box src ="#michantiTexture" enter-world class="starting"></a-box>
+          <a-box src ="#michantiTexture" enter-world class="starting"></a-box>
+          <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
+          <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
+          <a-box src ="#snowrdVid" enter-world class="starting"></a-box>
+          <a-box src ="#snowrdVid" enter-world class="starting"></a-box>
+          <a-box src ="#thebijVid" enter-world class="starting"></a-box>
+          <a-box src ="#hornetVid" enter-world class="starting"></a-box>
         </a-entity>
 
 
@@ -282,18 +285,18 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-box src ="#marketVid" enter-world class="starting"></a-box>
         <a-box src ="#marketVid" enter-world class="starting"></a-box>
         <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
-        <a-box src ="#javafieldVid" enter-world class="starting"></a-box>
+        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
+        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
+        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
+        <a-box src ="#teethaVid" enter-world class="starting"></a-box>
+        <a-box src ="#teethaVid" enter-world class="starting"></a-box>
+        <a-box src ="#blmVid" enter-world class="starting"></a-box>
+        <a-box src ="#overitVid" enter-world class="starting"></a-box>
+        <a-box src ="#overitVid" enter-world class="starting"></a-box>
+        <a-box src ="#crazyVid" enter-world class="starting"></a-box>
+        <a-box src ="#sighVid" enter-world class="starting"></a-box>
+        <a-box src ="#trumpthumbTexture" enter-world class="starting"></a-box>
+        <a-box src ="#trumpthumbTexture" enter-world class="starting"></a-box>
       </a-entity>
 
 
@@ -436,10 +439,10 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
       <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
       <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#crazyVid" enter-world class="starting"></a-box>
-      <a-box src ="#crazyVid" enter-world class="starting"></a-box>
-      <a-box src ="#crazyVid" enter-world class="starting"></a-box>
-      <a-box src ="#crazyVid" enter-world class="starting"></a-box>
+      <a-box src ="#bbathVid" enter-world class="starting"></a-box>
+      <a-box src ="#bbathVid" enter-world class="starting"></a-box>
+      <a-box src ="#bbathVid" enter-world class="starting"></a-box>
+      <a-box src ="#bbathVid" enter-world class="starting"></a-box>
       <a-box src ="#crazyVid" enter-world class="starting"></a-box>
       <a-box src ="#crazyVid" enter-world class="starting"></a-box>
       <a-box src ="#crazyVid" enter-world class="starting"></a-box>
@@ -577,7 +580,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
          <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>
          
          <a-video mixin="video" src= "#overitVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src= "#javafieldVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#beirutVid" enter-world class="starting"></a-video>  
          <a-video mixin="video" src= "#westsideVid" enter-world class="starting"></a-video> 
       </a-entity>
 
@@ -585,7 +588,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
       <!-- BIG DODEC 2 -->
       <a-entity layout="type:dodecahedron; radius:35" scale="1" position ="0 3 4">
         <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>    
-        <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#javafieldVid" enter-world class="starting"></a-video>  
         <a-video mixin="video" src= "#covidgraveVid" enter-world class="starting"></a-video>  
         <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
         <a-video mixin="video" src = "#hornetVid" enter-world class="starting"></a-video> 
@@ -620,8 +623,8 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
         <a-video mixin="video" src= ": #debateVid" enter-world class="starting"></a-video>   -->
 
         <a-video mixin="video" src= "#sighVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#javafieldVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#westsideVid" enter-world class="starting"></a-video> 
+        <a-video mixin="video" src= "#bushfireVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#debateVid" enter-world class="starting"></a-video> 
      </a-entity>
 
       <a-entity position="0 0 0">
