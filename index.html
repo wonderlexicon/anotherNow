@@ -34,6 +34,7 @@
             <video id ="covidgraveVid" src="assets/video/covidgrave.mp4" autoplay = true loop = true preload = true></video>
             <video id ="hornetVid" src="assets/video/hornetvid.mp4" autoplay = true loop = true preload = true></video>
             <video id ="marketVid" src="assets/video/market.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="nyprotestVid" src="assets/video/nyprotest.mp4" autoplay = true loop = true preload = true></video>
             <!-- selfiezoom  -->
             <video id ="bbathVid" src="assets/video/bbath.mp4" autoplay = true loop = true preload = true></video>
             <video id ="bijaVid" src="assets/video/bija.mp4" autoplay = true loop = true preload = true></video>
@@ -54,10 +55,14 @@
             <video id ="westsideVid" src="assets/video/westside.mp4" autoplay = true loop = true preload = true></video>
             <img id ="hornetTexture" src="assets/img/killerhornet.jpg"></img>
             <img id ="atmosphereTexture" src="assets/img/earthatmosphere.jpg"></img>
-            <img id ="earthlightsTexture" src="assets/img/earthlights.png"></img>
-            <img id ="earthcloudsTexture" src="assets/img/earthclouds.png"></img>
-            <img id ="earthspecTexture" src="assets/img/earthspec.jpg"></img>
+            <img id ="waterTexture" src="assets/img/water.jpg"></img>
+            <img id ="cloudsTexture" src="assets/img/clouds.jpg"></img>
+            <img id ="redwoodTexture" src="assets/img/redwood.jpg"></img>
             <img id ="youngblmTexture" src="assets/img/youngblm.jpg"></img>
+            <img id ="earthlightsTexture" src="assets/img/earthlights.png"></img>
+            <img id ="fishbowlTexture" src="assets/img/fishbowl.jpg"></img>
+            <img id ="nydockTexture" src="assets/img/nydock.jpg"></img>
+            <img id ="desertpanTexture" src="assets/img/desertpan.jpg"></img>
             <img id ="unonlineTexture" src="assets/img/unonline.jpg"></img>
             <img id ="marketVid" src="assets/img/demprimary.jpg"></img>
             <img id ="marketfreakTexture" src="assets/img/marketfreak.jpg"></img>
@@ -70,8 +75,8 @@
             <img id ="trumpaquitTexture" src="assets/img/trumpaquit.jpg"></img>
             <img id ="timerbgTexture" src="assets/img/timerbg.jpg"></img>
             <img id ="virtualcommenceTexture" src="assets/img/virtualcommence.jpg"></img>
-            <img id ="cloudlineTexture" src="assets/img/cloudline.png"></img>
-            <img id ="heavyskyTexture" src="assets/img/heavysky.png"></img>
+            <img id ="vailTexture" src="assets/img/vail.jpg"></img>
+            <img id ="birdseyeTexture" src="assets/img/birdseye.jpg"></img>
             <img id ="wuhancovidexture" src="assets/img/wuhancovid.jpg"></img
             <audio id="javasoundsAud" src="assets/audio/javasounds.wav" autoplay ="false" loop ="true" preload ="true"></audio>
         </a-assets>
@@ -107,8 +112,10 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
     
         <!-- Specify our scene. -->
         <!-- <a-scene stats> -->
-    
-          
+<!--     
+           QUESTIONS: CAN I MAKE THE VIDEOPHERE BACKGROUND A RANDOM SHUFFLE OF AN ARRAY OF VIDEOS? CA I MAKE THE BIG DOEDECS A RANDOM ARRAY OF VIDEOS? -->
+
+           
           <!-- Define camera with zero user height, movement disabled and arrow key rotation added. -->
           <!-- <a-camera user-height="0" wasd-controls-enabled="false" arrow-key-rotation> -->
             <!-- Text elements for display messaging. -->
@@ -121,6 +128,8 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
 <!--  
               TOPCENTER earthlights -->
     <a-sphere material="src:#earthlightsTexture;"  position="0 10 0" rotation="0 45 45" scale="5 5 5"  class="starting"></a-sphere>
+
+    <!-- <a-entity video="src:#nyprotestVid;"  position="10 12 0" rotation="0 45 45" scale="5 5 5"  class="starting"></a-entity> -->
 
     <a-sphere material="src:#earthlightsTexture;" position="-2 5 0" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
 
@@ -177,7 +186,7 @@ LEAVE THIS LIGHT ON! -->
         <!-- RIGHT GLOBE -->
       <a-entity id="sphere" geometry="primitive: sphere"   
       position = "50 0 -20" scale="20 20 20"
-      material="src:#atmosphereTexture;" class ="startong">
+      material="src:#atmosphereTexture;" class ="starting">
       </a-entity>
  
          <!-- LEFT GLOBE -->
