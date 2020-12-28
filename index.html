@@ -60,6 +60,7 @@
             <img id ="redwoodTexture" src="assets/img/redwood.jpg"></img>
             <img id ="youngblmTexture" src="assets/img/youngblm.jpg"></img>
             <img id ="earthlightsTexture" src="assets/img/earthlights.png"></img>
+            <img id ="moonTexture" src="assets/img/moon.jpg"></img>
             <img id ="fishbowlTexture" src="assets/img/fishbowl.jpg"></img>
             <img id ="nydockTexture" src="assets/img/nydock.jpg"></img>
             <img id ="desertpanTexture" src="assets/img/desertpan.jpg"></img>
@@ -115,7 +116,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
 <!--     
            QUESTIONS: CAN I MAKE THE VIDEOPHERE BACKGROUND A RANDOM SHUFFLE OF AN ARRAY OF VIDEOS? CA I MAKE THE BIG DOEDECS A RANDOM ARRAY OF VIDEOS? -->
 
-           
+
           <!-- Define camera with zero user height, movement disabled and arrow key rotation added. -->
           <!-- <a-camera user-height="0" wasd-controls-enabled="false" arrow-key-rotation> -->
             <!-- Text elements for display messaging. -->
@@ -127,41 +128,53 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             </a-entity> -->
 <!--  
               TOPCENTER earthlights -->
-    <a-sphere material="src:#earthlightsTexture;"  position="0 10 0" rotation="0 45 45" scale="5 5 5"  class="starting"></a-sphere>
+    <a-sphere material="src:#moonTexture;"  position="0 10 0" rotation="0 45 45" scale="5 5 5"
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
     <!-- <a-entity video="src:#nyprotestVid;"  position="10 12 0" rotation="0 45 45" scale="5 5 5"  class="starting"></a-entity> -->
 
-    <a-sphere material="src:#earthlightsTexture;" position="-2 5 0" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;" position="-2 5 0" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
   
-    <a-sphere material="src:#earthlightsTexture;"  position="4 5 -8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;"  position="4 5 -8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
       
   
-  <a-sphere material="src:#earthlightsTexture;" position="-4 5 8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1"  class="starting"></a-sphere>
+  <a-sphere material="src:#earthlightsTexture;" position="-4 5 8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1"  class="starting"
+  animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
 <!-- 
 LEAVE THIS LIGHT ON! -->
-    <a-sphere material="src:#earthlightsTexture;" position="6 5 -6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting" ></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;" position="6 5 -6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: 1" class="starting" 
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
-    <a-sphere material="src:#earthlightsTexture;" position="-6 5 6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;" position="-6 5 6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
   
-    <a-sphere material="src:#earthlightsTexture;"  position="8 5 -4" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;"  position="8 5 -4" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
   
-    <a-sphere material="src:#earthlightsTexture;"  position="-8 5 4" rotation="0 45 45" scale="1 1 1"light="type: point; intensity: .1" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;" position="-8 5 4" rotation="0 45 45" scale="1 1 1"light="type: point; intensity: 1" class="starting"
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
-    <a-sphere material="src:#earthlightsTexture;"  position="6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;"  position="6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
     
-    <a-sphere material="src:#earthlightsTexture;" position="-6 5 2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere>
+    <a-sphere material="src:#earthlightsTexture;" position="-6 5 2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
 
       
-    <a-sphere material="src:#earthlightsTexture;" position="-6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere> -->
+    <a-sphere material="src:#earthlightsTexture;" position="-6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere> 
 
-    <a-sphere material="src:#earthlightsTexture;" position="8 5 0" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting"></a-sphere> -->
+    <a-sphere material="src:#earthlightsTexture;" position="8 5 0" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" class="starting" 
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere> 
 
              <!-- LANDMARK RED
       <a-sphere material="src:#earthlightsTexture;" position="0 5 8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere> -->
@@ -173,32 +186,37 @@ LEAVE THIS LIGHT ON! -->
       <a-entity id="sphere" geometry="primitive: sphere"
       scale= "20 20 20 " position = "0 50 -8" 
       light="type: point; intensity: .7"
-      material="src:#atmosphereTexture;"class="starting">
+      material="src:#atmosphereTexture;"class="starting"
+      animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
       </a-entity> 
 
         <!-- BOTTOM GLOBE -->
        <a-entity id="sphere" geometry="primitive: sphere"
        position = "0 -50 -8" scale="20 20 20"
        light="type: point; intensity: 1"
-       material="src:#atmosphereTexture;">
+       material="src:#atmosphereTexture;" 
+       animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
        </a-entity> 
 
         <!-- RIGHT GLOBE -->
       <a-entity id="sphere" geometry="primitive: sphere"   
       position = "50 0 -20" scale="20 20 20"
-      material="src:#atmosphereTexture;" class ="starting">
+      material="src:#atmosphereTexture;" class ="starting"
+      animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
       </a-entity>
  
          <!-- LEFT GLOBE -->
       <a-entity id="sphere" geometry="primitive: sphere" 
       position = "-50 0 -8" scale="20 20 20"
-      material="src:#atmosphereTexture;"class="starting">
+      material="src:#atmosphereTexture;"class="starting"
+      animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
       </a-entity>
 
       <!-- CENTER GLOBE -->
       <a-entity id="sphere" geometry="primitive: sphere" 
       position = "0 -5 0" scale="5 5 5"
-      material="src:#atmosphereTexture;"class="starting">
+      material="src:#atmosphereTexture;"class="starting"
+      animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
       </a-entity> 
 
       
