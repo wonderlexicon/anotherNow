@@ -157,7 +157,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             </a-entity> -->
 <!--  
               TOPCENTER earthlights -->
-    <a-sphere material="src:#starcloudsTexture;"  position="0 10 0" rotation="0 0 0" scale="5 5 5"
+    <a-sphere material="src:#spacecloudsTexture;"  position="0 10 0" rotation="0 0 0" scale="5 5 5"
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
     <!-- <a-entity video="src:#nyprotestVid;"  position="10 12 0" rotation="0 45 45" scale="5 5 5"  class="starting"></a-entity> -->
@@ -187,7 +187,7 @@ LEAVE THIS LIGHT ON! -->
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
   
-    <a-sphere material="src:#otherplanetTexture;" position="-8 5 4" rotation="0 45 45" scale="1 1 1"light="type: point; intensity: 1" 
+    <a-sphere material="src:#otherplanetTexture;" position="-8 5 4" rotation="0 0 0" scale="1 1 1"light="type: point; intensity: 1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
     <a-sphere material="src:#hazeTexture;"  position="6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
@@ -202,7 +202,7 @@ LEAVE THIS LIGHT ON! -->
     <a-sphere material="src:#lightningTexture" position="-6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere> 
 
-    <a-sphere material="src:#lightningTexture;" position="8 5 0" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" 
+    <a-sphere material="src:#vortexTexture;" position="8 5 0" rotation="0 0 0" scale="1 1 1" light="type: point; intensity: .1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere> 
 
              <!-- LANDMARK RED
@@ -215,7 +215,7 @@ LEAVE THIS LIGHT ON! -->
       <a-entity id="sphere" geometry="primitive: sphere"
       scale= "20 20 20 " position = "0 50 -8" 
       light="type: point; intensity: .7"
-      material="src:#otherplanetTexture;"
+      material="src:#spacecloudsTexture;"
       animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
       </a-entity> 
 
@@ -268,7 +268,7 @@ LEAVE THIS LIGHT ON! -->
 
    <!-- DODEC 1 blmVid ENTRYSPOT-->
 
-        <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="0 0 -8 scale: 5">
+        <!-- <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="0 0 -8 scale: 5">
           <a-box mixin="video" src= "#blmVid" enter-world class="starting"></a-box>  
           <a-box src ="#timerbgTexture" enter-world class="starting"></a-box>
           <a-box src ="#timerbgTexture" enter-world class="starting"></a-box>
@@ -296,12 +296,12 @@ LEAVE THIS LIGHT ON! -->
           <a-box src ="#hornetVid" enter-world class="starting"></a-box>
         </a-entityevent-set__up="_event: mouseup; scale: 1 1 1"
           event-set__leave="_event: mouseleave; scale: 1 1 1">
-        </a-entity>
+        </a-entity> -->
 
 
 <!-- DODEC2 royals -->
 
-
+<!-- 
         <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="8 0 0">
         <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
         <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
@@ -323,12 +323,12 @@ LEAVE THIS LIGHT ON! -->
         <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
         <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
         <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-      </a-entity>
+      </a-entity> -->
 
 
 <!-- DODEC 3 politics-->
 
-      
+<!--       
         <a-entity layout="type: dodecahedron; radius: 8" scale="1.5" position ="-20 0 4">
         <a-box src ="#marketVid" enter-world class="starting"></a-box>
         <a-box src ="#marketVid" enter-world class="starting"></a-box>
@@ -355,11 +355,11 @@ LEAVE THIS LIGHT ON! -->
         <a-box src ="#sighVid" enter-world class="starting"></a-box>
         <a-box src ="#trumpthumbTexture" enter-world class="starting"></a-box>
         <a-box src ="#trumpthumbTexture" enter-world class="starting"></a-box>
-      </a-entity>
+      </a-entity> -->
 
 
       <!-- DODEC 4 bija -->
-
+<!-- 
       <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="0 0 12">
         <a-box src ="#debateVid" enter-world class="starting"></a-box>
         <a-box src ="#pelosiripTexture" enter-world class="starting"></a-box>
@@ -386,11 +386,11 @@ LEAVE THIS LIGHT ON! -->
         <a-box src ="#youngblmTexture" enter-world class="starting"></a-box>
         <a-box src ="#youngblmTexture" enter-world class="starting"></a-box>
         <a-box src ="#youngblmTexture" enter-world class="starting"></a-box>
-      </a-entity>
+      </a-entity> -->
 
        <!-- DODEC 5 hornet and bushfire-->
 
-       <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="-8 0 8">
+       <!-- <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="-8 0 8">
         <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
         <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
         <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
@@ -416,12 +416,12 @@ LEAVE THIS LIGHT ON! -->
         <a-box src ="#hornetVid" enter-world class="starting"></a-box>
         <a-box src ="#hornetVid" enter-world class="starting"></a-box>
         <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-      </a-entity>
+      </a-entity> -->
 
 
       <!-- DODEC 6 waterpedal-->
 
-      <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="-12 0 0">
+      <!-- <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="-12 0 0">
           <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
           <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
           <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
@@ -448,10 +448,10 @@ LEAVE THIS LIGHT ON! -->
           <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
           <a-box src ="#beirutVid" enter-world class="starting"></a-box>
         </a-entity>
-   
+    -->
 
 <!-- DODEC 6 coachvid-->
-
+<!-- 
       <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position="16 0 0">
         <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
         <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
@@ -507,7 +507,7 @@ LEAVE THIS LIGHT ON! -->
       <a-box src ="#crazyVid" enter-world class="starting"></a-box>
       <a-box src ="#crazyVid" enter-world class="starting"></a-box>
       <a-box src ="#crazyVid" enter-world class="starting"></a-box>
-      </a-entity>
+      </a-entity> -->
 
 
         <!-- DODEC 8 trumpie -->
