@@ -53,29 +53,40 @@
             <video id ="snowrdVid" src="assets/video/snowrd.mp4" autoplay = true loop = true preload = true></video>
             <video id ="waterpedVid" src="assets/video/waterpedal.mp4" autoplay = true loop = true preload = true></video>
             <video id ="westsideVid" src="assets/video/westside.mp4" autoplay = true loop = true preload = true></video>
-            <img id ="hornetTexture" src="assets/img/killerhornet.jpg"></img>
+
+            <!-- environment imgs -->
             <img id ="atmosphereTexture" src="assets/img/earthatmosphere.jpg"></img>
-            <img id ="waterTexture" src="assets/img/water.jpg"></img>
-            <img id ="clouds1Texture" src="assets/img/clouds1.png"></img>
             <img id ="redwoodTexture" src="assets/img/redwood.jpg"></img>
-            <img id ="youngblmTexture" src="assets/img/youngblm.jpg"></img>
-            <img id ="waterTexture" src="assets/img/water.jpg"></img>
-            <img id ="clouds6Texture" src="assets/img/clouds6.png"></img>
-            <img id ="clouds4Texture" src="assets/img/clouds4.png"></img>
-            <img id ="clouds2Texture" src="assets/img/clouds2.png"></img>
-            <img id ="clouds3Texture" src="assets/img/clouds3.png"></img>
-            <img id ="clouds5Texture" src="assets/img/clouds5.png"></img>
+            <img id ="skynomoonTexture" src="assets/img/skynomoon.png"></img>
+            <img id ="vortexTexture" src="assets/img/vortex.png"></img>
+            <img id ="otherplanetTexture" src="assets/img/otherplanet.png"></img>
             <img id ="starsTexture" src="assets/img/stars.png"></img>
-            <img id ="brushedmetalTexture" src="assets/img/brushedmetal.jpg"></img>
+            <img id ="stormTexture" src="assets/img/storm.png"></img>
+            <img id ="waterTexture" src="assets/img/water.jpg"></img>
+            <img id ="spacecloudsTexture" src="assets/img/spaceclouds.png"></img>
+            <img id ="starcloudsTexture" src="assets/img/starclouds.png"></img>
+            <img id ="clouds6Texture" src="assets/img/clouds6.png"></img>
+            <img id ="clouds5Texture" src="assets/img/clouds5.png"></img>
+            <img id ="clouds4Texture" src="assets/img/clouds4.png"></img>
+            <img id ="clouds3Texture" src="assets/img/clouds3.png"></img>
+            <img id ="clouds2Texture" src="assets/img/clouds2.png"></img>
+            <img id ="clouds1Texture" src="assets/img/clouds1.png"></img>
+            <img id ="cloudsTexture" src="assets/img/clouds.png"></img>
             <img id ="earthlightsTexture" src="assets/img/earthlights.png"></img>
             <img id ="lightningTexture" src="assets/img/lightning.png"></img>
             <img id ="hazeTexture" src="assets/img/haze.png"></img>
             <img id ="moonTexture" src="assets/img/moon.jpg"></img>
-            <img id ="cloudsTexture" src="assets/img/clouds.png"></img>
             <img id ="nydockTexture" src="assets/img/nydock.jpg"></img>
             <img id ="desertpanTexture" src="assets/img/desertpan.jpg"></img>
+            <img id ="vailTexture" src="assets/img/vail.jpg"></img>
+            <img id ="birdseyeTexture" src="assets/img/birdseye.jpg"></img>
+
+
+            <!-- curremt event img -->
+            <img id ="hornetTexture" src="assets/img/killerhornet.jpg"></img>
+            <img id ="youngblmTexture" src="assets/img/youngblm.jpg"></img>
             <img id ="unonlineTexture" src="assets/img/unonline.jpg"></img>
-            <img id ="marketVid" src="assets/img/demprimary.jpg"></img>
+            <img id ="demprimaryTexture" src="assets/img/demprimary.jpg"></img>
             <img id ="marketfreakTexture" src="assets/img/marketfreak.jpg"></img>
             <img id ="trumpthumbTexture" src="assets/img/trumpthumb.jpg"></img>
             <img id ="michantiTexture" src="assets/img/michantihome.jpg"></img>
@@ -86,9 +97,7 @@
             <img id ="trumpaquitTexture" src="assets/img/trumpaquit.jpg"></img>
             <img id ="timerbgTexture" src="assets/img/timerbg.jpg"></img>
             <img id ="virtualcommenceTexture" src="assets/img/virtualcommence.jpg"></img>
-            <img id ="vailTexture" src="assets/img/vail.jpg"></img>
-            <img id ="birdseyeTexture" src="assets/img/birdseye.jpg"></img>
-            <img id ="wuhancovidexture" src="assets/img/wuhancovid.jpg"></img
+            <img id ="wuhancovidTexture" src="assets/img/wuhancovid.jpg"></img
             <audio id="javasoundsAud" src="assets/audio/javasounds.wav" autoplay ="false" loop ="true" preload ="true"></audio>
         </a-assets>
 
@@ -148,7 +157,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             </a-entity> -->
 <!--  
               TOPCENTER earthlights -->
-    <a-sphere material="src:#starsTexture;"  position="0 10 0" rotation="0 0 0" scale="5 5 5"
+    <a-sphere material="src:#starcloudsTexture;"  position="0 10 0" rotation="0 0 0" scale="5 5 5"
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
     <!-- <a-entity video="src:#nyprotestVid;"  position="10 12 0" rotation="0 45 45" scale="5 5 5"  class="starting"></a-entity> -->
@@ -167,18 +176,18 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
 
 <!-- 
 LEAVE THIS LIGHT ON! -->
-    <a-sphere material="src:#earthlightsTexture;" position="6 5 -6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: 1" 
+    <a-sphere material="src:#clouds3Texture;" position="6 5 -6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: 1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
-    <a-sphere material="src:#earthlightsTexture;" position="-6 5 6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
-    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
-
-  
-    <a-sphere material="src:#clouds3Texture;"  position="8 5 -4" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" 
+    <a-sphere material="src:#clouds5Texture;" position="-6 5 6" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
   
-    <a-sphere material="src:#earthlightsTexture;" position="-8 5 4" rotation="0 45 45" scale="1 1 1"light="type: point; intensity: 1" 
+    <a-sphere material="src:#clouds4Texture;"  position="8 5 -4" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" 
+    animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
+
+  
+    <a-sphere material="src:#otherplanetTexture;" position="-8 5 4" rotation="0 45 45" scale="1 1 1"light="type: point; intensity: 1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
     <a-sphere material="src:#hazeTexture;"  position="6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
@@ -206,7 +215,7 @@ LEAVE THIS LIGHT ON! -->
       <a-entity id="sphere" geometry="primitive: sphere"
       scale= "20 20 20 " position = "0 50 -8" 
       light="type: point; intensity: .7"
-      material="src:#atmosphereTexture;"class="starting"
+      material="src:#otherplanetTexture;"
       animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
       </a-entity> 
 
