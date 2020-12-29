@@ -56,12 +56,22 @@
             <img id ="hornetTexture" src="assets/img/killerhornet.jpg"></img>
             <img id ="atmosphereTexture" src="assets/img/earthatmosphere.jpg"></img>
             <img id ="waterTexture" src="assets/img/water.jpg"></img>
-            <img id ="cloudsTexture" src="assets/img/clouds.jpg"></img>
+            <img id ="clouds1Texture" src="assets/img/clouds1.png"></img>
             <img id ="redwoodTexture" src="assets/img/redwood.jpg"></img>
             <img id ="youngblmTexture" src="assets/img/youngblm.jpg"></img>
+            <img id ="waterTexture" src="assets/img/water.jpg"></img>
+            <img id ="clouds6Texture" src="assets/img/clouds6.png"></img>
+            <img id ="clouds4Texture" src="assets/img/clouds4.png"></img>
+            <img id ="clouds2Texture" src="assets/img/clouds2.png"></img>
+            <img id ="clouds3Texture" src="assets/img/clouds3.png"></img>
+            <img id ="clouds5Texture" src="assets/img/clouds5.png"></img>
+            <img id ="starsTexture" src="assets/img/stars.png"></img>
+            <img id ="brushedmetalTexture" src="assets/img/brushedmetal.jpg"></img>
             <img id ="earthlightsTexture" src="assets/img/earthlights.png"></img>
+            <img id ="lightningTexture" src="assets/img/lightning.png"></img>
+            <img id ="hazeTexture" src="assets/img/haze.png"></img>
             <img id ="moonTexture" src="assets/img/moon.jpg"></img>
-            <img id ="fishbowlTexture" src="assets/img/fishbowl.jpg"></img>
+            <img id ="cloudsTexture" src="assets/img/clouds.png"></img>
             <img id ="nydockTexture" src="assets/img/nydock.jpg"></img>
             <img id ="desertpanTexture" src="assets/img/desertpan.jpg"></img>
             <img id ="unonlineTexture" src="assets/img/unonline.jpg"></img>
@@ -138,21 +148,21 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             </a-entity> -->
 <!--  
               TOPCENTER earthlights -->
-    <a-sphere material="src:#moonTexture;"  position="0 10 0" rotation="0 45 45" scale="5 5 5"
+    <a-sphere material="src:#starsTexture;"  position="0 10 0" rotation="0 0 0" scale="5 5 5"
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
     <!-- <a-entity video="src:#nyprotestVid;"  position="10 12 0" rotation="0 45 45" scale="5 5 5"  class="starting"></a-entity> -->
 
-    <a-sphere material="src:#earthlightsTexture;" position="-2 5 0" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
+    <a-sphere material="src:#cloudsTexture;" position="-2 5 0" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
   
-    <a-sphere material="src:#earthlightsTexture;"  position="4 5 -8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
+    <a-sphere material="src:#clouds1Texture;"  position="4 5 -8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
       
   
-  <a-sphere material="src:#earthlightsTexture;" position="-4 5 8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
+  <a-sphere material="src:#clouds2Texture;" position="-4 5 8" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
   animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
 <!-- 
@@ -164,26 +174,26 @@ LEAVE THIS LIGHT ON! -->
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
   
-    <a-sphere material="src:#earthlightsTexture;"  position="8 5 -4" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" 
+    <a-sphere material="src:#clouds3Texture;"  position="8 5 -4" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
   
     <a-sphere material="src:#earthlightsTexture;" position="-8 5 4" rotation="0 45 45" scale="1 1 1"light="type: point; intensity: 1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
-    <a-sphere material="src:#earthlightsTexture;"  position="6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
+    <a-sphere material="src:#hazeTexture;"  position="6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
     
-    <a-sphere material="src:#earthlightsTexture;" position="-6 5 2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
+    <a-sphere material="src:#stormTexture;" position="-6 5 2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
 
       
-    <a-sphere material="src:#earthlightsTexture;" position="-6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
+    <a-sphere material="src:#lightningTexture" position="-6 5 -2" rotation="0 45 45" scale="1 1 1" light="type: point; intensity: .1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere> 
 
-    <a-sphere material="src:#earthlightsTexture;" position="8 5 0" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" 
+    <a-sphere material="src:#lightningTexture;" position="8 5 0" rotation="0 -45 45" scale="1 1 1" light="type: point; intensity: .1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere> 
 
              <!-- LANDMARK RED
@@ -434,10 +444,10 @@ LEAVE THIS LIGHT ON! -->
 <!-- DODEC 6 coachvid-->
 
       <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position="16 0 0">
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
+        <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
+        <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
+        <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
         <a-box src ="#coachVid" enter-world class="starting"></a-box>
         <a-box src ="#coachVid" enter-world class="starting"></a-box>
         <a-box src ="#coachVid" enter-world class="starting"></a-box>
@@ -613,7 +623,7 @@ LEAVE THIS LIGHT ON! -->
          <a-video mixin="video" src= "#snowrdVid" enter-world class="starting"></a-video>  
 
          <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>    
-         <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#nyprotestVid" enter-world class="starting"></a-video>  
          <a-video mixin="video" src= "#covidgraveVid" enter-world class="starting"></a-video>  
          <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
          <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>
@@ -649,7 +659,7 @@ LEAVE THIS LIGHT ON! -->
         <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
         <a-video mixin="video" src = "#westsideVid" enter-world class="starting"></a-video>
         <a-video mixin="video" src= "#bushfireVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#westsideVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#nyprotestVid" enter-world class="starting"></a-video>  
         <a-video mixin="video" src= "#snowrdVid" enter-world class="starting"></a-video>  
 
         <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>    
