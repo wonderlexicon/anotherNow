@@ -34,7 +34,8 @@
             <video id ="covidgraveVid" src="assets/video/covidgrave.mp4" autoplay = true loop = true preload = true></video>
             <video id ="hornetVid" src="assets/video/hornetvid.mp4" autoplay = true loop = true preload = true></video>
             <video id ="marketVid" src="assets/video/market.mp4" autoplay = true loop = true preload = true></video>
-            <video id ="nyprotestVid" src="assets/video/nyprotest.mp4" autoplay = true loop = true preload = true></video>
+            <video id ="nyprotestVid" src="assets/video/nyprotest.mp4" muted=true autoplay = true loop = true preload = true></video>
+
             <!-- selfiezoom  -->
             <video id ="bbathVid" src="assets/video/bbath.mp4" autoplay = true loop = true preload = true></video>
             <video id ="bijaVid" src="assets/video/bija.mp4" autoplay = true loop = true preload = true></video>
@@ -157,21 +158,21 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             </a-entity> -->
 <!--  
               TOPCENTER earthlights -->
-    <a-sphere material="src:#earthlightsTexture;"  position="0 10 0" rotation="0 0 0" scale="5 5 5"
+    <!-- <a-sphere material="src:#earthlightsTexture;"  position="0 10 0" rotation="0 0 0" scale="5 5 5"
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
     
     <a-entity layout="type: circle; radius: 10;" position:="0 5 0" rotation="-90 0 0" scale= "1 1 1" <a-animation  animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000" 
     easing="linear">
       
-      <a-box mixin="video" src= "#coachVid" rotation ="90 0 0 enter-world class="starting"></a-box>  
+      <a-box mixin="video" src= "#coachVid" rotation ="90 0 0 enter-world class="homescreen"></a-box>  
       <a-sphere light="type: point; intensity: .1" material="starsTexture;"
       ></a-sphere>
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
      <a-sphere light="type: point; intensity: .1" material="lightningTexture;"
      ></a-sphere>
-     <a-box mixin="video" src= "#coachVid" rotation ="90 0 0 enter-world class="starting"></a-box> 
+     <a-box mixin="video" src= "#coachVid" rotation ="90 0 0 enter-world class="homescreen"></a-box> 
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
@@ -180,12 +181,12 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
      ></a-sphere>
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
-     <a-box mixin="video" src= "#coachVid" rotation ="90 0 0 enter-world class="starting"></a-box> 
+     <a-box mixin="video" src= "#coachVid" rotation ="90 0 0 enter-world class="homescreen"></a-box> 
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
-    </a-entity>
+    </a-entity> -->
 <!-- 
     QUESTION: IF I WANT THE REVOLUTIONS TO STOP ON USER ACTION, HOW DO I DO THAT? -->
 
@@ -225,7 +226,7 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
 
 
 
-    <!-- <a-entity video="src:#nyprotestVid;"  position="10 12 0" rotation="0 0 0" scale="5 5 5"  class="starting"></a-entity> -->
+    <!-- <a-entity video="src:#nyprotestVid;"  position="10 12 0" rotation="0 0 0" scale="5 5 5"  class="homescreen"></a-entity> -->
 
     <!-- <a-sphere material="src:#cloudsTexture;" position="-2 5 0" rotation="0 0 0" scale="1 1 1" light="type: point; intensity: .1" 
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
@@ -271,14 +272,14 @@ LEAVE THIS LIGHT ON! -->
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>  -->
 
              <!-- LANDMARK RED
-      <a-sphere material="src:#earthlightsTexture;" position="0 5 8" rotation="0 0 0" scale="1 1 1" light="type: point; intensity: .5" class="starting"></a-sphere> -->
+      <a-sphere material="src:#earthlightsTexture;" position="0 5 8" rotation="0 0 0" scale="1 1 1" light="type: point; intensity: .5" class="homescreen"></a-sphere> -->
 
     
-     <!-- <a-sphere material="src:#flatblueskyTexture;" position="0 5 10" rotation="0 0 0" scale="10 10 10" light="type: point; intensity: .5" class="starting"></a-sphere> -->
+     <!-- <a-sphere material="src:#flatblueskyTexture;" position="0 5 10" rotation="0 0 0" scale="10 10 10" light="type: point; intensity: .5" class="homescreen"></a-sphere> -->
 
         <!-- TOP GLOBE -->
-      <a-entity id="sphere" geometry="primitive: sphere"
-      position = "0 50 -8" scale= "20 20 20 " 
+      <a-entity id="topsphere" geometry="primitive: sphere"
+      position = "0 50 -8" scale= "30 30 30 " 
       light="type: point; intensity: .7"
       material="src:#spacecloudsTexture;"
       animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
@@ -295,21 +296,21 @@ LEAVE THIS LIGHT ON! -->
         <!-- RIGHT GLOBE -->
       <a-entity id="sphere" geometry="primitive: sphere"   
       position = "50 0 -20" scale="20 20 20"
-      material="src:#atmosphereTexture;" class ="starting"
+      material="src:#atmosphereTexture;" class ="homescreen"
       animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
       </a-entity>
  
          <!-- LEFT GLOBE -->
       <a-entity id="sphere" geometry="primitive: sphere" 
       position = "-50 0 -20" scale="20 20 20"
-      material="src:#atmosphereTexture;"class="starting"
+      material="src:#atmosphereTexture;"class="homescreen"
       animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
       </a-entity>
 
       <!-- CENTER GLOBE -->
       <a-entity id="sphere" geometry="primitive: sphere" 
       position = "0 -5 0" scale="5 5 5"
-      material="src:#atmosphereTexture;"class="starting"
+      material="src:#atmosphereTexture;"class="homescreen"
       animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
       </a-entity> 
 
@@ -318,13 +319,13 @@ LEAVE THIS LIGHT ON! -->
        <a-entity id="sphere" geometry="primitive: sphere" 
        position = "15 5 10" scale="5 5 5" material="src:#atmosphereTexture;"
        light="type: point; intensity: .3"
-       class="starting">
+       class="homescreen">
        </a-entity>
 
        <a-entity id="sphere" geometry="primitive: sphere"
        position = "-15 5 10" scale="5 5 5"
        material="src:#atmosphereTexture;" light="type: point; intensity: .5"
-       class="starting"></a-entity> -->
+       class="homescreen"></a-entity> -->
 
         <!-- <a-box src="#bdaysongVid" position="28 18 -3" rotation="0 -45 45" scale="6 6 6"
         animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
@@ -334,31 +335,31 @@ LEAVE THIS LIGHT ON! -->
    <!-- DODEC 1 blmVid ENTRYSPOT-->
 
         <!-- <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="0 0 -8 scale: 5">
-          <a-box mixin="video" src= "#blmVid" enter-world class="starting"></a-box>  
-          <a-box src ="#timerbgTexture" enter-world class="starting"></a-box>
-          <a-box src ="#timerbgTexture" enter-world class="starting"></a-box>
-          <a-box src ="#timerbgTexture" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#trumpaquitTexture" enter-world class="starting"></a-box>
-          <a-box src ="#trumpaquitTexture" enter-world class="starting"></a-box>
-          <a-box src ="#trumpaquitTexture" enter-world class="starting"></a-box>
-          <a-box src ="#pelosiripTexture" enter-world class="starting"></a-box>
-          <a-box src ="#bbathVid" enter-world class="starting"></a-box>
-          <a-box src ="#pelosiripTexture" enter-world class="starting"></a-box>
-          <a-box src ="#coachVid" enter-world class="starting"></a-box>
-          <a-box src ="#coachVid" enter-world class="starting"></a-box>
-          <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-          <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-          <a-box src ="#michantiTexture" enter-world class="starting"></a-box>
-          <a-box src ="#michantiTexture" enter-world class="starting"></a-box>
-          <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-          <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-          <a-box src ="#snowrdVid" enter-world class="starting"></a-box>
-          <a-box src ="#snowrdVid" enter-world class="starting"></a-box>
-          <a-box src ="#thebijVid" enter-world class="starting"></a-box>
-          <a-box src ="#hornetVid" enter-world class="starting"></a-box>
+          <a-box mixin="video" src= "#blmVid" enter-world class="homescreen"></a-box>  
+          <a-box src ="#timerbgTexture" enter-world class="homescreen"></a-box>
+          <a-box src ="#timerbgTexture" enter-world class="homescreen"></a-box>
+          <a-box src ="#timerbgTexture" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#trumpaquitTexture" enter-world class="homescreen"></a-box>
+          <a-box src ="#trumpaquitTexture" enter-world class="homescreen"></a-box>
+          <a-box src ="#trumpaquitTexture" enter-world class="homescreen"></a-box>
+          <a-box src ="#pelosiripTexture" enter-world class="homescreen"></a-box>
+          <a-box src ="#bbathVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#pelosiripTexture" enter-world class="homescreen"></a-box>
+          <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#michantiTexture" enter-world class="homescreen"></a-box>
+          <a-box src ="#michantiTexture" enter-world class="homescreen"></a-box>
+          <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#snowrdVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#snowrdVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#thebijVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
         </a-entityevent-set__up="_event: mouseup; scale: 1 1 1"
           event-set__leave="_event: mouseleave; scale: 1 1 1">
         </a-entity> -->
@@ -368,26 +369,26 @@ LEAVE THIS LIGHT ON! -->
 
 <!-- 
         <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="8 0 0">
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#royalexitTexture" enter-world class="starting"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#royalexitTexture" enter-world class="homescreen"></a-box>
       </a-entity> -->
 
 
@@ -395,272 +396,272 @@ LEAVE THIS LIGHT ON! -->
 
 <!--       
         <a-entity layout="type: dodecahedron; radius: 8" scale="1.5" position ="-20 0 4">
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#marketVid" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bidenbernieTexture" enter-world class="starting"></a-box>
-        <a-box src ="#teethaVid" enter-world class="starting"></a-box>
-        <a-box src ="#teethaVid" enter-world class="starting"></a-box>
-        <a-box src ="#blmVid" enter-world class="starting"></a-box>
-        <a-box src ="#overitVid" enter-world class="starting"></a-box>
-        <a-box src ="#overitVid" enter-world class="starting"></a-box>
-        <a-box src ="#crazyVid" enter-world class="starting"></a-box>
-        <a-box src ="#sighVid" enter-world class="starting"></a-box>
-        <a-box src ="#trumpthumbTexture" enter-world class="starting"></a-box>
-        <a-box src ="#trumpthumbTexture" enter-world class="starting"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#marketVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bidenbernieTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#bidenbernieTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#bidenbernieTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#teethaVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#teethaVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#blmVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#overitVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#overitVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#crazyVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#sighVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#trumpthumbTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#trumpthumbTexture" enter-world class="homescreen"></a-box>
       </a-entity> -->
 
 
       <!-- DODEC 4 bija -->
 <!-- 
       <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="0 0 12">
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#pelosiripTexture" enter-world class="starting"></a-box>
-        <a-box src ="#unonlineTexture" enter-world class="starting"></a-box>
-        <a-box src ="#bbathVid" enter-world class="starting"></a-box>
-        <a-box src ="#bbathVid" enter-world class="starting"></a-box>
-        <a-box src ="#bbathVid" enter-world class="starting"></a-box>
-        <a-box src ="#michantiTexture" enter-world class="starting"></a-box>
-        <a-box src ="#michantiTexture" enter-world class="starting"></a-box>
-        <a-box src ="#michantiTexture" enter-world class="starting"></a-box>
-        <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-        <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-        <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-        <a-box src ="#beirutVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#blmVid" enter-world class="starting"></a-box>
-        <a-box src ="#blmVid" enter-world class="starting"></a-box>
-        <a-box src ="#blmVid" enter-world class="starting"></a-box>
-        <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-        <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-        <a-box src ="#youngblmTexture" enter-world class="starting"></a-box>
-        <a-box src ="#youngblmTexture" enter-world class="starting"></a-box>
-        <a-box src ="#youngblmTexture" enter-world class="starting"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#pelosiripTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#unonlineTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#bbathVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bbathVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bbathVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#michantiTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#michantiTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#michantiTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#beirutVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#beirutVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#beirutVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#beirutVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#blmVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#blmVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#blmVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#youngblmTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#youngblmTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#youngblmTexture" enter-world class="homescreen"></a-box>
       </a-entity> -->
 
        <!-- DODEC 5 hornet and bushfire-->
 
        <!-- <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="-8 0 8">
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
-        <a-box src ="#hornetVid" enter-world class="starting"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#hornetVid" enter-world class="homescreen"></a-box>
       </a-entity> -->
 
 
       <!-- DODEC 6 waterpedal-->
 
       <!-- <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="-12 0 0">
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#covidgraveVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#quietairportfeetVid" enter-world class="starting"></a-box>
-          <a-box src ="#beirutVid" enter-world class="starting"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#covidgraveVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
+          <a-box src ="#beirutVid" enter-world class="homescreen"></a-box>
         </a-entity>
     -->
 
 <!-- DODEC 6 coachvid-->
 <!-- 
       <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position="16 0 0">
-        <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
-        <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
-        <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
-        <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
-        <a-box src ="#coachVid" enter-world class="starting"></a-box>
+        <a-box src ="#nyprotestVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#nyprotestVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#nyprotestVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#nyprotestVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#coachVid" enter-world class="homescreen"></a-box>
       </a-entity>
 
 DODEC 7 coffee
     <a-entity layout="type: dodecahedron;  radius: 5" scale="1.5" position ="0 0 8">
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#coffeeVid" enter-world class="starting"></a-box>
-      <a-box src ="#bbathVid" enter-world class="starting"></a-box>
-      <a-box src ="#bbathVid" enter-world class="starting"></a-box>
-      <a-box src ="#bbathVid" enter-world class="starting"></a-box>
-      <a-box src ="#bbathVid" enter-world class="starting"></a-box>
-      <a-box src ="#crazyVid" enter-world class="starting"></a-box>
-      <a-box src ="#crazyVid" enter-world class="starting"></a-box>
-      <a-box src ="#crazyVid" enter-world class="starting"></a-box>
-      <a-box src ="#crazyVid" enter-world class="starting"></a-box>
-      <a-box src ="#crazyVid" enter-world class="starting"></a-box>
-      <a-box src ="#crazyVid" enter-world class="starting"></a-box> 
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#coffeeVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#bbathVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#bbathVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#bbathVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#bbathVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#crazyVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#crazyVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#crazyVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#crazyVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#crazyVid" enter-world class="homescreen"></a-box>
+      <a-box src ="#crazyVid" enter-world class="homescreen"></a-box> 
       </a-entity>
 
 
        DODEC 8 trumpie -->
       <!-- <a-entity layout="type: dodecahedron; radius: 5" scale="1.5" position ="8 0 0">
-        <a-box src ="#trumpaquitTexture" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
-        <a-box src ="#debateVid" enter-world class="starting"></a-box>
+        <a-box src ="#trumpaquitTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#debateVid" enter-world class="homescreen"></a-box>
       </a-entity> -->
 
 
           <!-- DODEC 9 bushfire -->
         <!-- <a-entity layout="type: dodecahedron; radius:5" scale:="1.5" position ="-8 0 -4">
-        <a-box mixin="video" src ="#nyprotestVid" enter-world class="starting"></a-box>
-        <a-box mixin="video" src ="#nyprotestVid" enter-world class="starting"></a-box>
-        <a-box mixin="video" src ="#nyprotestVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#bushfireVid" enter-world class="starting"></a-box>
-        <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
-        <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
-        <a-box src ="#nyprotestVid" enter-world class="starting"></a-box>
+        <a-box mixin="video" src ="#nyprotestVid" enter-world class="homescreen"></a-box>
+        <a-box mixin="video" src ="#nyprotestVid" enter-world class="homescreen"></a-box>
+        <a-box mixin="video" src ="#nyprotestVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#bushfireVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#nyprotestVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#nyprotestVid" enter-world class="homescreen"></a-box>
+        <a-box src ="#nyprotestVid" enter-world class="homescreen"></a-box>
       </a-entity> -->
 
 <!-- 
       <a-entity layout="type: dodecahedron; radius: 8" scale:="1.5" position ="20 0 4">
-        <a-box src ="#wuhancovidTexture" enter-world class="starting"></a-box>
-        <a-box src ="#wuhancovidTexture" enter-world class="starting"></a-box>
-        <a-box src ="#wuhancovidTexture" enter-world class="starting"></a-box>
-        <a-box src ="#wuhancovidTexture" enter-world class="starting"></a-box>
-        <a-box src ="#wuhancovidTexture" enter-world class="starting"></a-box>
-        <a-box src ="#wuhancovidTexture" enter-world class="starting"></a-box>
-        <a-box src ="#wuhancovidTexture" enter-world class="starting"></a-box>
-        <a-box src ="#wuhancovidTexture" enter-world class="starting"></a-box>
-        <a-box src ="#wuhancovidTexture" enter-world class="starting"></a-box>
-        <a-box src ="#wuhancovidTexture" enter-world class="starting"></a-box>
-        <a-box src ="#virualcommenceTexture" enter-world class="starting"></a-box>
-        <a-box src ="#virualcommenceTexture" enter-world class="starting"></a-box>
-        <a-box src ="#virualcommenceTexture" enter-world class="starting"></a-box>
-        <a-box src ="#virualcommenceTexture" enter-world class="starting"></a-box>
-        <a-box src ="#virualcommenceTexture" enter-world class="starting"></a-box>
-        <a-box src ="#virualcommenceTexture" enter-world class="starting"></a-box>
-        <a-box src ="#virualcommenceTexture" enter-world class="starting"></a-box>
-        <a-box src ="#virualcommenceTexture" enter-world class="starting"></a-box>
-        <a-box src ="#virualcommenceTexture" enter-world class="starting"></a-box>
-        <a-box src ="#virualcommenceTexture" enter-world class="starting"></a-box>
-        <a-box src ="#virualcommenceTexture" enter-world class="starting"></a-box>
-        <a-box mixin="video" src ="#unonlineTexture" enter-world class="starting"></a-box>
-        <a-box mixin="video" src ="#unonlineTexture" enter-world class="starting"></a-box>
-        <a-box mixin="video" src ="#unonlineTexture" enter-world class="starting"></a-box>
-        <a-box mixin="video" src ="#quietairportfeetVid" enter-world class="starting"></a-box>
+        <a-box src ="#wuhancovidTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#wuhancovidTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#wuhancovidTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#wuhancovidTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#wuhancovidTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#wuhancovidTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#wuhancovidTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#wuhancovidTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#wuhancovidTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#wuhancovidTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#virualcommenceTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#virualcommenceTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#virualcommenceTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#virualcommenceTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#virualcommenceTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#virualcommenceTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#virualcommenceTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#virualcommenceTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#virualcommenceTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#virualcommenceTexture" enter-world class="homescreen"></a-box>
+        <a-box src ="#virualcommenceTexture" enter-world class="homescreen"></a-box>
+        <a-box mixin="video" src ="#unonlineTexture" enter-world class="homescreen"></a-box>
+        <a-box mixin="video" src ="#unonlineTexture" enter-world class="homescreen"></a-box>
+        <a-box mixin="video" src ="#unonlineTexture" enter-world class="homescreen"></a-box>
+        <a-box mixin="video" src ="#quietairportfeetVid" enter-world class="homescreen"></a-box>
       </a-entity> -->
 
 
@@ -670,91 +671,99 @@ DODEC 7 coffee
 
 <!-- BIG DODEC 1 -->
       <!-- <a-entity layout="type: dodecahedron; radius:40" scale="1.5" position="0 3.5 5.5">
-         <a-video mixin="video" src= "#coffeeVid" enter-world class="starting"></a-video>    
-         <a-video mixin="video" src= "#covidgraveVid" enter-world class="starting"></a-video>
-         <a-video mixin="video" src= "#coachVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src= "#sighVid" enter-world class="starting" ></a-video>  
-         <a-video mixin="video" src= "#coachVid" enter-world class="starting" ></a-video>  
+         <a-video mixin="video" src= "#coffeeVid" enter-world class="homescreen"></a-video>    
+         <a-video mixin="video" src= "#covidgraveVid" enter-world class="homescreen"></a-video>
+         <a-video mixin="video" src= "#coachVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src= "#sighVid" enter-world class="homescreen" ></a-video>  
+         <a-video mixin="video" src= "#coachVid" enter-world class="homescreen" ></a-video>  
 
-         <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>    
-         <a-video mixin="video" src= "#hornetVid" enter-world class="starting"></a-video>
-         <a-video mixin="video" src= "#overitVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#marketVid" enter-world class="homescreen"></a-video>    
+         <a-video mixin="video" src= "#hornetVid" enter-world class="homescreen"></a-video>
+         <a-video mixin="video" src= "#overitVid" enter-world class="homescreen"></a-video>  
 
-         <a-video mixin="video" src = "#silentwavesVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src= "#debateVid" enter-world class="starting"></a-video>
+         <a-video mixin="video" src = "#silentwavesVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src= "#debateVid" enter-world class="homescreen"></a-video>
   
-         <a-video mixin="video" src= "#thebijVid" enter-world class="starting"></a-video>    
-         <a-video mixin="video" src= "#silentwavesVid" enter-world class="starting"></a-video>
-         <a-video mixin="video" src= "#beirutVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src= "#teethaVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src= "#bbathVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src= "#thebijVid" enter-world class="homescreen"></a-video>    
+         <a-video mixin="video" src= "#silentwavesVid" enter-world class="homescreen"></a-video>
+         <a-video mixin="video" src= "#beirutVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src= "#teethaVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src= "#bbathVid" enter-world class="homescreen"></a-video>  
          
  
-         <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src = "#snowrdVid" enter-world class="starting"></a-video>
-         <a-video mixin="video" src= "#teethaVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src= "#crazyVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src= "#snowrdVid" enter-world class="starting"></a-video>  
+         <a-video mixin="video" src = "#debateVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src = "#snowrdVid" enter-world class="homescreen"></a-video>
+         <a-video mixin="video" src= "#teethaVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src= "#crazyVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src= "#snowrdVid" enter-world class="homescreen"></a-video>  
 
-         <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>    
-         <a-video mixin="video" src= "#nyprotestVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src= "#covidgraveVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>
+         <a-video mixin="video" src= "#marketVid" enter-world class="homescreen"></a-video>    
+         <a-video mixin="video" src= "#nyprotestVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src= "#covidgraveVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src = "#debateVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src = "#debateVid" enter-world class="homescreen"></a-video>
          
-         <a-video mixin="video" src= "#overitVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src= "#beirutVid" enter-world class="starting"></a-video>  
-         <a-video mixin="video" src= "#westsideVid" enter-world class="starting"></a-video> 
+         <a-video mixin="video" src= "#overitVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src= "#beirutVid" enter-world class="homescreen"></a-video>  
+         <a-video mixin="video" src= "#westsideVid" enter-world class="homescreen"></a-video> 
       </a-entity>
 
 
       <!-- BIG DODEC 2 -->
-      <!-- <a-entity layout="type:dodecahedron; radius:45" scale="2" position ="0 3 4">
-        <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>    
-        <a-video mixin="video" src= "#javafieldVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#covidgraveVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src = "#hornetVid" enter-world class="starting"></a-video> 
+     <a-entity layout="type:dodecahedron; radius:45" scale="2" position ="0 3 4">
+        <a-video mixin="video" src= "#marketVid" enter-world class="homescreen"></a-video>    
+        <a-video mixin="video" src= "#javafieldVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src= "#covidgraveVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src = "#debateVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src = "#hornetVid" enter-world class="homescreen"></a-video> 
 
-        <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>    
-        <a-video mixin="video" src= "#covidgraveVid" enter-world class="starting"></a-video>
-        <a-video mixin="video" src= "#teethaVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#marketVid" enter-world class="homescreen"></a-video>    
+        <a-video mixin="video" src= "#covidgraveVid" enter-world class="homescreen"></a-video>
+        <a-video mixin="video" src= "#teethaVid" enter-world class="homescreen"></a-video>  
 
-        <a-video mixin="video" src = "#beirutVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#covidgraveVid" enter-world class="starting"></a-video>
+        <a-video mixin="video" src = "#beirutVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src= "#covidgraveVid" enter-world class="homescreen"></a-video>
  
-        <a-video mixin="video" src= "#thebijVid" enter-world class="starting"></a-video>    
-        <a-video mixin="video" src= "#hornetVid" enter-world class="starting"></a-video>
-        <a-video mixin="video" src= "#coffeeVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#beirutVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#bbathVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src= "#thebijVid" enter-world class="homescreen"></a-video>    
+        <a-video mixin="video" src= "#hornetVid" enter-world class="homescreen"></a-video>
+        <a-video mixin="video" src= "#coffeeVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src= "#beirutVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src= "#bbathVid" enter-world class="homescreen"></a-video>  
         
 
-        <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src = "#westsideVid" enter-world class="starting"></a-video>
-        <a-video mixin="video" src= "#bushfireVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#nyprotestVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#snowrdVid" enter-world class="starting"></a-video>  
+        <a-video mixin="video" src = "#debateVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src = "#westsideVid" enter-world class="homescreen"></a-video>
+        <a-video mixin="video" src= "#bushfireVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src= "#nyprotestVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src= "#snowrdVid" enter-world class="homescreen"></a-video>  
 
-        <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>    
-        <a-video mixin="video" src= "#marketVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#covidgraveVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src = "#debateVid" enter-world class="starting"></a-video>
+        <a-video mixin="video" src= "#marketVid" enter-world class="homescreen"></a-video>    
+        <a-video mixin="video" src= "#marketVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src= "#covidgraveVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src = "#debateVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src = "#debateVid" enter-world class="homescreen"></a-video>
         
     
 
-        <a-video mixin="video" src= "#sighVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#bushfireVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= "#debateVid" enter-world class="starting"></a-video> 
-     </a-entity> -->
+        <a-video mixin="video" src= "#sighVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src= "#bushfireVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src= "#debateVid" enter-world class="homescreen"></a-video> 
+     </a-entity> 
 
-      <a-entity position="0 0 0">
-        <a-entity camera look-controls></a-entity>
+      <a-entity position="0 0 100">
+        <a-entity camera look-controls>
+          <a-cursor 
+          material ="color:red; shader: flat" 
+          geometry="primitive:ring; radiusInner: .01; radiusOuter: .02">
+          </a-cursor>
+        </a-entity>
        </a-entity> 
 
-    <!-- <a-video mixin="video" src= ": #debateVid" enter-world class="starting"></a-video>  
-        <a-video mixin="video" src= ": #debateVid" enter-world class="starting"></a-video>   -->
+
+    
+
+    <!-- <a-video mixin="video" src= ": #debateVid" enter-world class="homescreen"></a-video>  
+        <a-video mixin="video" src= ": #debateVid" enter-world class="homescreen"></a-video>   -->
         <!-- SIGH BOX -->
       <!-- <a-box position="-8 -8 -8" multisrc="src0:#sighTexture; src1:#sighTexture; src2:#sighTexture; src3:#sighTexture; src4:#sighTexture; src5:#sighTexture;" 
       opacity=".9" scale="5 5 5" animation="property: object3D.position.xyz; to: 1.1; dir: alternate; dur: 20000; loop: true"
@@ -880,15 +889,6 @@ DODEC 7 coffee
 
 
 
-
-      <a-camera>
-        <a-cursor 
-        material ="color:red; shader: flat" 
-        geometry="primitive:ring; radiusInner: .01; radiusOuter: .02"
-
-        >
-        </a-cursor>
-      </a-camera>
 
   
   

@@ -149,7 +149,7 @@ AFRAME.registerComponent('enter-world', {
     this.el.addEventListener('click', function () {
       var videosphere = document.getElementById("videosphere");
       videosphere.setAttribute("src", el.getAttribute("src"));
-     var startingElements= document.querySelectorAll(".starting");
+     var startingElements= document.querySelectorAll(".homescreen");
      startingElements.forEach(element => {
        element.setAttribute("visible",false);
      });
@@ -158,20 +158,20 @@ AFRAME.registerComponent('enter-world', {
 });
   
   
-// AFRAME.registerComponent('leave-world', {
+AFRAME.registerComponent('back-to-homescreen', {
 
 
-//   init: function () {
-//     var data = this.data;
-//     var el = this.el;
-//     this.el.addEventListener('click', function () {
-//       var videosphere = document.getElementById("moon");
-//       videosphere.setAttribute("src", el.getAttribute("src"));
-//      var startingElements= document.querySelectorAll(".leaving");
-//      startingElements.forEach(element => {
-//        element.setAttribute("visible",false);
-//      });
-//     });
-//   }
-// });
+  init: function () {
+    var data = this.data;
+    var el = this.el;
+    this.el.addEventListener('click', function () {
+      var videosphere = document.getElementById("videosphere");
+      videosphere.setAttribute("src", el.getAttribute("src"));
+     var startingElements= document.querySelectorAll(".starting");
+     startingElements.forEach(element => {
+       element.setAttribute("visible",true);
+     });
+    });
+  }
+});
   
