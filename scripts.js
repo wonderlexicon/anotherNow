@@ -139,6 +139,32 @@
 //   });
 // });
 // }
+
+
+window.addEventListener("wheel", event=>{
+  let myCamera = document.getElementById("camera");
+  const delta=Math.sign(event.wheelDelta);
+  const currentZoom = Number(myCamera.getAttribute("zoom"));
+  const zoomRate = 0.01;
+  let newZoom = delta * zoomRate + currentZoom;
+ 
+  const closestZoom = 5; 
+  const farthestZoom =0.01;
+
+  if (newZoom > closestZoom){
+      newZoom= closestZoom
+  }
+  if (newZoom < farthestZoom){
+      newZoom = farthestZoom
+  }
+
+  myCamera.setAttribute("zoom", newZoom);
+  console.log({newZoom})
+})
+
+
+var insideHomescreen=true;
+
   
 AFRAME.registerComponent('enter-world', {
 
@@ -147,12 +173,15 @@ AFRAME.registerComponent('enter-world', {
     var data = this.data;
     var el = this.el;
     this.el.addEventListener('click', function () {
+      if (insideHomescreen){
       var videosphere = document.getElementById("videosphere");
       videosphere.setAttribute("src", el.getAttribute("src"));
      var startingElements= document.querySelectorAll(".homescreen");
      startingElements.forEach(element => {
        element.setAttribute("visible",false);
      });
+     insideHomescreen =false 
+    }
     });
   }
 });
@@ -166,12 +195,14 @@ AFRAME.registerComponent('back-to-homescreen', {
     var el = this.el;
     this.el.addEventListener('click', function () {
       var videosphere = document.getElementById("videosphere");
-      videosphere.setAttribute("src", el.getAttribute("src"));
-     var startingElements= document.querySelectorAll(".starting");
+      videosphere.setAttribute("src", "#quietopenrdVid");
+     var startingElements= document.querySelectorAll(".homescreen");
      startingElements.forEach(element => {
        element.setAttribute("visible",true);
      });
     });
   }
 });
+
+
   

@@ -158,35 +158,51 @@ material="shader: flat; side: double" look-at="[camera]"></a-mixin>
             </a-entity> -->
 <!--  
               TOPCENTER earthlights -->
-    <!-- <a-sphere material="src:#earthlightsTexture;"  position="0 10 0" rotation="0 0 0" scale="5 5 5"
+    <a-sphere material="src:#earthlightsTexture;"  position="0 10 0" rotation="0 0 0" scale="5 5 5"
     animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000"></a-sphere>
 
     
     <a-entity layout="type: circle; radius: 10;" position:="0 5 0" rotation="-90 0 0" scale= "1 1 1" <a-animation  animation= "property: object3D.rotation.y; to:360; loop:true; dur:5000" 
     easing="linear">
+
+    <a-torus mixin="video" src= "#bushfireVid" rotation ="90 0 0 enter-world class="homescreen"></a-torus> 
       
-      <a-box mixin="video" src= "#coachVid" rotation ="90 0 0 enter-world class="homescreen"></a-box>  
+      <a-box mixin="video" src= "#nyprotestVid" rotation ="90 0 0 enter-world class="homescreen"></a-box>  
+
       <a-sphere light="type: point; intensity: .1" material="starsTexture;"
       ></a-sphere>
+
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
+
+     <a-box src ="#bushfireVid" scale="3 3 3" enter-world class="homescreen"></a-box>
+
      <a-sphere light="type: point; intensity: .1" material="lightningTexture;"
      ></a-sphere>
      <a-box mixin="video" src= "#coachVid" rotation ="90 0 0 enter-world class="homescreen"></a-box> 
+
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
+
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
+
+     <a-box src ="#bushfireVid" scale="3 3 3" enter-world class="homescreen"></a-box>
+
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
+
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
-     <a-box mixin="video" src= "#coachVid" rotation ="90 0 0 enter-world class="homescreen"></a-box> 
+
+     <a-box mixin="video" src= "#bushfireVid" rotation ="90 0 0 enter-world class="homescreen"></a-box> 
+
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
+
      <a-sphere light="type: point; intensity: .1" material="earthlightsTexture;"
      ></a-sphere>
-    </a-entity> -->
+    </a-entity>
 <!-- 
     QUESTION: IF I WANT THE REVOLUTIONS TO STOP ON USER ACTION, HOW DO I DO THAT? -->
 
@@ -279,7 +295,8 @@ LEAVE THIS LIGHT ON! -->
 
         <!-- TOP GLOBE -->
       <a-entity id="topsphere" geometry="primitive: sphere"
-      position = "0 50 -8" scale= "30 30 30 " 
+      back-to-homescreen
+      position = "0 50 -8" scale= "20 20 20 " 
       light="type: point; intensity: .7"
       material="src:#spacecloudsTexture;"
       animation= "property: object3D.rotation.y; to:360; loop:true; dur:10000">
