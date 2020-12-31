@@ -767,6 +767,9 @@ DODEC 7 coffee
         <a-video mixin="video" src= "#debateVid" enter-world class="homescreen"></a-video> 
      </a-entity> 
 
+     
+
+
       <a-entity position="0 0 100">
         <a-entity camera look-controls>
           <a-cursor 
@@ -775,9 +778,13 @@ DODEC 7 coffee
           </a-cursor>
         </a-entity>
        </a-entity> 
+       
+       <a-camera id = "camera" zoom = ".10" event-set__wheel = "_event:wheel;zoom:wheelDelta">
+        <a-cursor></a-cursor>
+        </a-camera>
 
-
-    
+       <!-- <a-entity id = "camera" zoom = ".10" event-set__wheel = "_event:wheel;zoom:wheelDelta">
+      </a-entity> -->
 
     <!-- <a-video mixin="video" src= ": #debateVid" enter-world class="homescreen"></a-video>  
         <a-video mixin="video" src= ": #debateVid" enter-world class="homescreen"></a-video>   -->
